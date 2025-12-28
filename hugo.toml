@@ -21,7 +21,7 @@ title = "Pruddieverse"
   [params.hero]
     title = "Building the Pruddieverse."
     subtitle = "Cloud & DevOps Engineer specializing in Scalable Infrastructure."
-    # image = "profile.jpg" # We will add this file later!
+    image = "headshot.jpg" # We will add this file later!
 
   # Social Links (This adds the icons recruiters look for!)
   [[params.author.links]]
