@@ -1,0 +1,27 @@
+baseURL = "https://www.pruddieverse.com"
+languageCode = "en-us"
+title = "Pruddieverse"
+theme = "congo"
+
+[params]
+  description = "Cloud & DevOps Engineer focused on Scalable Infrastructure."
+  # The "Hacker" Aesthetic
+  colorScheme = "blowfish" # This gives Congo a deeper, darker "hacker" feel
+  fontFamily = "inter"
+  
+  # Hero Section (Your Option C choice)
+  [params.hero]
+    title = "Building the Pruddieverse."
+    subtitle = "Cloud & DevOps Engineer | Automating Infrastructure & Scaling Digital Worlds."
+    image = "headshot.jpg" # We will upload your photo with this name later
+    canary = "Currently architecting high-availability solutions."
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20
