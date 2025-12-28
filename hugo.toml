@@ -7,26 +7,24 @@ title = "Pruddieverse"
     path = "github.com/jpanther/congo/v2"
 
 [params]
-  # Theme Customization
-  colorScheme = "emerald" # Options: coffee, ocean, forest, blowfish, slate
+  colorScheme = "ocean" 
   fontFamily = "inter"
   
-  # Branding
-  description = "Cloud & DevOps Engineer | Architecting the Pruddieverse"
-  
+  [params.author]
+    name = "Prudence Anumudu"
+    image = "headshot.jpg" # This looks inside the /assets/ folder automatically
+
   [params.homepage]
     layout = "hero"
     showRecent = false
 
   [params.hero]
     title = "Building the Pruddieverse."
-    subtitle = "Cloud & DevOps Engineer specializing in Scalable Infrastructure."
-    image = "headshot.jpg" # We will add this file later!
+    subtitle = "Cloud & DevOps Engineer | Automating Infrastructure & Scaling Digital Worlds."
 
-  # Social Links (This adds the icons recruiters look for!)
   [[params.author.links]]
     github = "https://github.com/Cwendee"
-    linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656/" # Update this!
+    linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656/"
     email = "pruddyanumudu@gmail.com"
 
 [menu]
