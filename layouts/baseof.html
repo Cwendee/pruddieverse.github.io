@@ -5,40 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: { 
                 extend: { 
-                    fontFamily: { brand: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
+                    fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] },
                     colors: { midnight: '#0a192f', accent: '#38bdf8', gold: '#ffd700' } 
                 } 
             }
         }
     </script>
     <style>
-        body { background-color: #0a192f; color: #cbd5e1; line-height: 1.8; }
-        h1, h2, h3 { color: #38bdf8; font-family: 'Playfair Display', serif; font-style: italic; }
-        .content-area p { margin-bottom: 2rem; font-size: 1.1rem; }
-        .content-area h3 { margin-top: 3rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        body { background-color: #0a192f; color: #cbd5e1; line-height: 2; font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: #38bdf8; letter-spacing: -0.02em; }
+        /* This fixes the jampacked feeling */
+        p, li { margin-bottom: 1.5rem; }
+        ul { margin-bottom: 2rem; }
+        li { list-style-type: none; border-left: 2px solid #38bdf8; padding-left: 15px; }
     </style>
 </head>
-<body class="font-sans antialiased flex flex-col min-h-screen">
+<body class="antialiased flex flex-col min-h-screen">
     <header class="py-8 px-6">
         <nav class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="/" class="font-brand text-2xl text-gold italic">Pruddieverse</a>
-            <div class="space-x-8 text-sm font-semibold tracking-widest uppercase">
-                <a href="/projects/" class="hover:text-accent transition-colors">Projects</a>
-                <a href="/about/" class="hover:text-accent transition-colors">About</a>
+            <a href="/" class="font-heading text-xl text-gold uppercase tracking-tighter">Pruddieverse</a>
+            <div class="space-x-8 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                <a href="/projects/" class="hover:text-accent">Projects</a>
+                <a href="/about/" class="hover:text-accent">About</a>
             </div>
         </nav>
     </header>
     <main class="flex-grow container mx-auto px-6 py-10 max-w-3xl">
         {{ block "main" . }}{{ end }}
     </main>
-    <footer class="py-12 text-center border-t border-white/5">
-        <p class="text-slate-500 text-xs tracking-widest uppercase">&copy; 2026 Prudence Anumudu</p>
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-600">&copy; 2026 Prudence Anumudu</p>
     </footer>
 </body>
 </html>
