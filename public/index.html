@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="generator" content="Hugo 0.123.7">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Site.Title }}</title>
+    <title>Pruddieverse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,11 +21,11 @@
     <style>
         body { background-color: #0a192f; color: #cbd5e1; font-family: 'Inter', sans-serif; line-height: 2; }
         
-        /* Fixed Titles - Smaller and fitting on one line */
+         
         h1 { font-family: 'Montserrat', sans-serif; color: #38bdf8; font-size: 1.75rem !important; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 0.05em; }
         h3 { font-family: 'Montserrat', sans-serif; color: #38bdf8; font-size: 1.1rem !important; margin-top: 4rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
 
-        /* Massive spacing for paragraphs and lists */
+         
         p { margin-bottom: 2.5rem !important; }
         li { margin-bottom: 2rem !important; list-style: none; padding-left: 1.5rem; border-left: 1px solid #38bdf8; }
         ul { margin-bottom: 3rem; }
@@ -44,7 +45,33 @@
         </nav>
     </header>
     <main class="flex-grow container mx-auto px-6 py-10 max-w-2xl">
-        {{ block "main" . }}{{ end }}
+        
+<section class="flex flex-col md:flex-row items-center gap-12 py-10">
+    <div class="w-64 h-auto shrink-0">
+        
+        
+            <img src="/headshot.jpg" alt="Prudence Anumudu" class="rounded-2xl border border-gold/20 shadow-2xl w-full h-auto">
+        
+    </div>
+    <div class="text-center md:text-left">
+        <h1 class="text-3xl md:text-4xl font-heading mb-2">Building the Pruddieverse</h1>
+        <h2 class="text-xl text-gold font-medium mb-6">Prudence Anumudu</h2>
+        <p class="text-lg text-slate-400">
+            I’m a tech professional transitioning from customer service into building, automating, and scaling reliable systems.
+        </p>
+        <p class="text-lg text-slate-400 mt-4">
+            I bring a people-first mindset into infrastructure and cloud solutions because great systems should work seamlessly for the people who use them.
+        </p>
+    </div>
+</section>
+
+<div class="mt-16 flex justify-end">
+    <a href="/projects/" class="text-[11px] uppercase tracking-[0.3em] text-slate-500 hover:text-gold flex items-center group">
+        Explore the laboratory 
+        <span class="ml-4 text-accent group-hover:translate-x-3 transition-all">———————&rarr;</span>
+    </a>
+</div>
+
     </main>
     <footer class="py-12 border-t border-white/5 text-center">
         <div class="flex justify-center space-x-10 mb-6">
