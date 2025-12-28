@@ -16,6 +16,13 @@
       <description>Building a high-performance personal brand site using Hugo, Tailwind CSS, and GitHub Actions.</description>
     </item>
     <item>
+      <title>Project 2: Automated Server Configuration</title>
+      <link>http://localhost:1313/projects/ansible-config/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/ansible-config/</guid>
+      <description>Using Ansible to automate the setup and configuration of web servers, ensuring consistency and reducing manual effort.</description>
+    </item>
+    <item>
       <title>Technical Profile</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
