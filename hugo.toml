@@ -1,6 +1,7 @@
 baseURL = "https://www.pruddieverse.com/"
 languageCode = "en-us"
 title = "Pruddieverse"
+theme = "congo"
 
 [module]
   [[module.imports]]
@@ -11,10 +12,10 @@ title = "Pruddieverse"
   colorScheme = "blowfish"
   fontFamily = "inter"
   
-  # This is the section that actually "turns on" the home page text
+  # This section activates the homepage layout and hides the "Recent" list
   [params.homepage]
-    layout = "page"
-    showRecent = true
+    layout = "hero"
+    showRecent = false
 
   [params.hero]
     title = "Building the Pruddieverse."
