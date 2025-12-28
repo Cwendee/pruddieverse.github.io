@@ -1,33 +1,17 @@
 ---
-title: "Technical Profile"
+title: "The Journey to Pruddieverse"
 ---
 
-## Prudence Anumudu
-**Tech-focused Professional | AWS Solutions Architect Associate Scholar**
+### The Evolution: Resilience in Motion
+My career didn't begin with code; it began with **people**. Starting in **Customer Service**, I learned to navigate high-pressure environments and solve problems in real-time. That curiosity and drive for growth led me into **Service Assurance** at Red Star Express (FedEx), where I ensure operational excellence.
 
-With over 7 years of experience in **Service Assurance and CRM Operations** at Red Star Express (FedEx Nigeria), I specialize in the intersection of operational efficiency and technical automation.
+### The Pivot: Driven by Curiosity
+I have always had an unending quest for knowledge. While others saw a workflow, I saw a system that could be optimized. This determination—this need to understand the "how" and the "why"—is what pulled me into the world of **DevOps**. I am not just transitioning into tech; I am bringing a decade of resilience and a "solution-first" mindset to the cloud.
 
-### 🎯 DevOps Pivot
-Currently a **Women Techsters Fellow (DevOps Track)**, I am translating years of leading cross-functional teams and managing SLAs into building automated CI/CD pipelines and Infrastructure as Code.
+### 🎓 Certifications & Leadership
+- **AWS Solutions Architect Associate (SAA)** | ALX Africa, Nov 2025
+- **AWS Certified Cloud Practitioner** | ALX Africa, June 2025
+- **AWS Technical Mentor (Volunteer)** | ALX Africa, Oct 2025 – Present
+- **Women Techsters Fellow** | DevOps Engineering Track, 2025–2026
 
-### 🛠️ Core Competencies
-- **Cloud:** AWS (EC2, S3, RDS, VPC, Lambda, SNS, EventBridge)
-- **IAC & Config:** Terraform, Ansible, CloudFormation
-- **Containers:** Docker, Kubernetes
-- **CI/CD:** Jenkins, GitHub Actions, AWS CodePipeline
-- **Monitoring:** CloudWatch, Grafana
-
-### 💼 Professional Evolution
-**Service Assurance Senior Supervisor | Red Star Express (FedEx)**
-*Bridging Operations and Support Teams*
-- Managing CRM configurations and troubleshooting enterprise software workflows.
-- Leveraging analytics to drive quality improvements and SLA adherence.
-
----
-
-### 📬 Let's Connect
-I am actively seeking opportunities to apply my Service Assurance background to DevOps and Cloud Engineering roles.
-
-- **LinkedIn:** [prudence-c-anumudu](https://www.linkedin.com/in/prudence-c-anumudu-35518656/)
-- **GitHub:** [Cwendee](https://github.com/Cwendee)
-- **Email:** [pruddyanumudu@gmail.com](mailto:pruddyanumudu@gmail.com)
+> "I don't just solve technical problems; I bridge the gap between human needs and automated solutions."

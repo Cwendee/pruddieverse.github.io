@@ -3,31 +3,45 @@
     <div class="w-48 h-48 md:w-64 md:h-64 relative shrink-0">
         {{ $img := resources.Get "headshot.jpg" }}
         {{ if $img }}
-            <img src="{{ $img.RelPermalink }}" alt="Prudence Anumudu" class="rounded-2xl shadow-2xl border-2 border-accent/30 object-cover w-full h-full">
-        {{ else }}
-            <div class="w-full h-full bg-slate-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-slate-700 text-slate-500">Image Not Found</div>
+            <img src="{{ $img.RelPermalink }}" alt="Prudence" class="rounded-2xl shadow-2xl border-2 border-accent/30 object-cover w-full h-full">
         {{ end }}
-        <div class="absolute -bottom-4 -right-4 bg-accent text-midnight font-bold px-4 py-1 rounded-lg text-sm shadow-xl">AWS Certified</div>
+        <div class="absolute -bottom-4 -right-4 bg-accent text-midnight font-bold px-4 py-1 rounded-lg text-sm shadow-xl italic">AWS SAA Certified</div>
     </div>
 
     <div class="flex-1 text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 text-white">Building the <span class="text-accent">Pruddieverse.</span></h1>
+        <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 text-white uppercase">Building the <span class="text-accent italic">Pruddieverse</span></h1>
         <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
-            Service Assurance Leader transitioning to **DevOps Engineering**. 
-            Bridging operational excellence at FedEx with cloud-native automation.
+            **Service Assurance Leader** pivoting to **DevOps Engineering**. 
+            AWS Solutions Architect Associate leveraging 7+ years of operational excellence to build resilient, automated cloud infrastructure.
         </p>
     </div>
 </div>
 
-<section class="mt-8 p-8 rounded-2xl bg-slate-900/40 border border-slate-800 prose prose-slate prose-invert max-w-none">
-    {{ .Content }}
-</section>
+<div class="mt-16">
+    <h2 class="text-2xl font-bold text-white mb-8 border-l-4 border-accent pl-4 uppercase tracking-widest">Core Technical Stack</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        {{ range (slice 
+            (dict "n" "AWS" "i" "fa-brands fa-aws") 
+            (dict "n" "Terraform" "i" "fa-solid fa-cloud") 
+            (dict "n" "Docker" "i" "fa-brands fa-docker") 
+            (dict "n" "Kubernetes" "i" "fa-solid fa-dharmachakra") 
+            (dict "n" "Jenkins" "i" "fa-brands fa-jenkins") 
+            (dict "n" "GitHub" "i" "fa-brands fa-github") 
+            (dict "n" "Bash" "i" "fa-solid fa-terminal") 
+            (dict "n" "Linux" "i" "fa-brands fa-linux")
+        ) }}
+        <div class="group flex flex-col items-center p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-accent hover:-translate-y-2 transition-all duration-300">
+            <i class="{{ .i }} text-3xl mb-3 text-slate-500 group-hover:text-accent transition-colors"></i>
+            <span class="text-xs font-bold uppercase tracking-tighter text-slate-400 group-hover:text-white">{{ .n }}</span>
+        </div>
+        {{ end }}
+    </div>
+</div>
 
-<div class="mt-16 mb-10 flex flex-col items-center">
-    <p class="text-slate-500 uppercase tracking-widest text-xs font-bold mb-6">Ready to see the work?</p>
-    <a href="/projects/" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-slate-800 rounded-xl border border-slate-700 hover:border-accent hover:bg-slate-800/80" role="button">
-        <span class="relative">Explore My Laboratory</span>
-        <svg class="w-5 h-5 ml-3 transition-transform group-hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<div class="mt-20 mb-10 flex flex-col items-center">
+    <a href="/projects/" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-slate-800 rounded-xl border border-slate-700 hover:border-accent" role="button">
+        <span>Explore My Laboratory</span>
+        <svg class="w-5 h-5 ml-3 transition-transform group-hover:translate-x-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
     </a>
