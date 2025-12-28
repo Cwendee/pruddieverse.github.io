@@ -1,25 +1,23 @@
 ---
-title: "Project 2: Automated Server Configuration"
+title: "Project 1: Moving from Manual Configs to Automated Orchestration"
 date: 2025-12-28
-summary: "Using Ansible to automate the setup and configuration of web servers, ensuring consistency and reducing manual effort."
+summary: "Milestone: Building a multi-node AWS infrastructure using Ansible to replace manual 'SSH-and-configure' steps with full Infrastructure as Code (IaC)."
 ---
 
-### Objective
-To eliminate manual server setup by creating reusable Ansible Playbooks that configure environments automatically and reliably.
+I’m excited to share a milestone in my DevOps journey! I just completed a hands-on project building a multi-node web infrastructure on AWS, moving away from manual "SSH-and-configure" steps toward full Infrastructure as Code (IaC).
 
-### Tech Stack
-- **Tool:** Ansible
-- **Language:** YAML
-- **Environment:** Linux (Ubuntu/Debian)
-- **Focus:** Configuration Management & Automation
+### 🚀 The Project
+I used Ansible to orchestrate a cluster of RHEL-based (Amazon Linux 2) nodes. Instead of configuring servers one by one, I developed a playbook to: 
 
-### 🚀 View the Code
-[**Click here to view my Ansible Repository on GitHub**](https://github.com/Cwendee) *(Note: Ensure your Ansible repo is public!)*
+- ✅ **Provision and configure** Apache (httpd) across a fleet of instances. 
+- ✅ **Deploy** a professional Bootstrap portfolio theme directly from GitHub. 
+- ✅ **Surgical Updates:** Used Regex and the Ansible replace module to perform content updates (titles and avatars) across all nodes simultaneously.
 
-### Key Achievements
-- **Idempotency:** Developed playbooks that can be run multiple times without changing the result if the system is already in the desired state.
-- **Automation:** Automated the installation of essential packages, user management, and security configurations.
-- **Inventory Management:** Organized server groups to handle different environment configurations (Dev/Prod) seamlessly.
+### 🔍 View the Code
+[**Direct Link to Ansible Repository**](https://github.com/Cwendee/ansible-config-mgt)
 
-### Impact
-This project demonstrates the ability to manage "Infrastructure as Code," a critical skill for scaling DevOps operations and ensuring environment parity.
+### 💡 The Real Learning
+The highlight wasn't just when the code worked; it was the troubleshooting! I navigated Git merge conflicts, handled SSH key management, and practiced security best practices by using placeholders and .gitignore for sensitive data.
+
+### 🎯 Key Takeaway
+Automation is more than just speed—it’s about **idempotency** and ensuring that infrastructure is consistent, repeatable, and secure.
