@@ -1,28 +1,27 @@
 ---
-title: "Automated Multi-Node Infrastructure Orchestration"
+title: "Automated Multi-Node Infrastructure"
 date: 2025-12-28
-summary: "Architected and deployed a scalable web infrastructure on AWS using Ansible to replace manual configuration with Infrastructure as Code (IaC)."
+summary: "Moving from manual configurations to automated orchestration with Ansible on AWS."
 ---
 
 ### Project Overview
-Transitioned infrastructure management from manual SSH-based configurations to a fully automated orchestration model. This project focuses on the deployment and synchronization of a multi-node RHEL-based environment on AWS.
 
-### Technical Specifications
-- **Orchestration:** Ansible (Idempotent Playbooks)
-- **Infrastructure:** AWS EC2 (RHEL/Amazon Linux 2)
-- **Web Stack:** Apache (httpd), PHP
-- **Source Control:** Git/GitHub
+I moved away from manual "SSH-and-configure" steps toward full Infrastructure as Code (IaC). This project focuses on the deployment of a multi-node cluster on AWS.
 
-### Key Deliverables & Implementation
-- **Fleet Provisioning:** Automated the configuration of Apache (httpd) across multiple distributed nodes simultaneously.
-- **Automated Deployment:** Established a pipeline to pull and deploy Bootstrap-based frontend assets directly from GitHub repositories.
-- **Global Configuration Management:** Implemented the Ansible  module with Regex patterns to execute surgical content updates across the entire server cluster in a single execution.
-- **Security & Integrity:** Managed SSH key authentication and utilized  protocols to ensure sensitive environment data remained secure during the CI/CD process.
+### Technical Stack
+
+* **Orchestration:** Ansible
+* **Infrastructure:** AWS EC2 (RHEL)
+* **Deployment:** Git & GitHub
+
+### Key Implementation
+
+* **Fleet Provisioning:** Automated Apache configuration across multiple nodes simultaneously.
+* **Surgical Updates:** Used Regex and the Ansible replace module for content updates across the cluster.
+* **Security:** Managed SSH key authentication and secure environment data protocols.
 
 ### Engineering Takeaway
-The implementation demonstrated the power of **idempotency** in configuration management—ensuring consistent, repeatable system states across heterogeneous environments while significantly reducing deployment lead times.
 
----
+Automation is more than just speed—it’s about ensuring that infrastructure is consistent, repeatable, and secure.
 
-### 🔗 Repository Access
-[**View Technical Source Code on GitHub**](https://github.com/Cwendee/ansible-config-mgt)
+[**View Source Code on GitHub**](https://github.com/Cwendee/ansible-config-mgt)
