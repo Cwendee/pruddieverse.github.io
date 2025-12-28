@@ -2,30 +2,19 @@ baseURL = "https://www.pruddieverse.com/"
 languageCode = "en-us"
 title = "Pruddieverse"
 
-[module]
-  [[module.imports]]
-    path = "github.com/jpanther/congo/v2"
-
 [params]
   colorScheme = "ocean" 
-  fontFamily = "inter"
   
   [params.author]
-    name = "Prudence Anumudu"
-    image = "headshot.jpg" # This looks inside the /assets/ folder automatically
+    name = "Pruddie"
+    image = "headshot.jpg" 
 
   [params.homepage]
     layout = "hero"
-    showRecent = false
 
   [params.hero]
     title = "Building the Pruddieverse."
-    subtitle = "Cloud & DevOps Engineer | Automating Infrastructure & Scaling Digital Worlds."
-
-  [[params.author.links]]
-    github = "https://github.com/Cwendee"
-    linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656/"
-    email = "pruddyanumudu@gmail.com"
+    subtitle = "Cloud & DevOps Engineer | Automating Infrastructure."
 
 [menu]
   [[menu.main]]

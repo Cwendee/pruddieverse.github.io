@@ -1,6 +1,5 @@
 ---
 title: "The Pruddieverse"
-layout: "hero"
 ---
 
 Welcome to my digital workspace. I specialize in automating infrastructure, scaling cloud environments, and building resilient systems. 

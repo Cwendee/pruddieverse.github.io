@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="flex flex-col md:flex-row items-center gap-12 py-10">
+    <div class="w-48 h-48 md:w-64 md:h-64 relative shrink-0">
+        {{ $img := resources.Get "headshot.jpg" }}
+        {{ if $img }}
+            <img src="{{ $img.RelPermalink }}" alt="Prudence Anumudu" class="rounded-2xl shadow-2xl border-2 border-accent/30 object-cover w-full h-full">
+        {{ else }}
+            <div class="w-full h-full bg-slate-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-slate-700 text-slate-500">Image Not Found</div>
+        {{ end }}
+        <div class="absolute -bottom-4 -right-4 bg-accent text-midnight font-bold px-4 py-1 rounded-lg text-sm shadow-xl">AWS Certified</div>
+    </div>
+
+    <div class="flex-1 text-center md:text-left">
+        <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 text-white">Building the <span class="text-accent">Pruddieverse.</span></h1>
+        <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
+            Service Assurance Leader transitioning to **DevOps Engineering**. 
+            Bridging operational excellence at FedEx with cloud-native automation.
+        </p>
+    </div>
+</div>
+
+<section class="mt-8 p-8 rounded-2xl bg-slate-900/40 border border-slate-800 prose prose-slate prose-invert max-w-none">
+    {{ .Content }}
+</section>
+
+<div class="mt-16 mb-10 flex flex-col items-center">
+    <p class="text-slate-500 uppercase tracking-widest text-xs font-bold mb-6">Ready to see the work?</p>
+    <a href="/projects/" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-slate-800 rounded-xl border border-slate-700 hover:border-accent hover:bg-slate-800/80" role="button">
+        <span class="relative">Explore My Laboratory</span>
+        <svg class="w-5 h-5 ml-3 transition-transform group-hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+    </a>
+</div>
+{{ end }}
