@@ -24,4 +24,4 @@ I moved away from manual "SSH-and-configure" steps toward full Infrastructure as
 
 Automation is more than just speed—it’s about ensuring that infrastructure is consistent, repeatable, and secure.
 
-[**View Source Code on GitHub**](https://github.com/Cwendee/ansible-config-mgt)
+[**View Source Code on GitHub**](https://github.com/Cwendee/ansible-projects)
