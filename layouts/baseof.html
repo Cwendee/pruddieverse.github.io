@@ -3,43 +3,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: { 
                 extend: { 
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: { midnight: '#020617', accent: '#38bdf8' } 
+                    fontFamily: { brand: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
+                    colors: { midnight: '#0a192f', gold: '#ffd700', accent: '#38bdf8' } 
                 } 
             }
         }
     </script>
 </head>
-<body class="bg-midnight text-slate-300 flex flex-col min-h-screen font-sans antialiased">
-    <header class="py-5 px-6 border-b border-slate-800/50 sticky top-0 z-50 bg-midnight/80 backdrop-blur-md">
+<body class="bg-midnight text-slate-300 font-sans antialiased flex flex-col min-h-screen">
+    <header class="py-6 px-6 border-b border-slate-800">
         <nav class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="/" class="text-xl font-black tracking-tighter text-white">PRUDDIEVERSE<span class="text-accent">.</span></a>
-            <div class="space-x-6 text-xs font-bold uppercase tracking-widest text-slate-500">
-                <a href="/projects/" class="hover:text-accent transition-colors">Projects</a>
-                <a href="/about/" class="hover:text-accent transition-colors">About</a>
+            <a href="/" class="font-brand text-2xl text-gold italic">Pruddieverse</a>
+            <div class="space-x-6 text-sm font-semibold text-slate-400">
+                <a href="/projects/" class="hover:text-gold transition-colors">Projects</a>
+                <a href="/about/" class="hover:text-gold transition-colors">About</a>
             </div>
         </nav>
     </header>
-    <main class="flex-grow container mx-auto px-6 py-10 max-w-4xl">
+    <main class="flex-grow container mx-auto px-6 py-12 max-w-4xl">
         {{ block "main" . }}{{ end }}
     </main>
-    <footer class="py-10 border-t border-slate-800/50">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-            <div class="flex space-x-6 mb-4">
-                <a href="https://github.com/Cwendee" target="_blank" class="text-slate-500 hover:text-accent text-xl"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656/" target="_blank" class="text-slate-500 hover:text-accent text-xl"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:pruddyanumudu@gmail.com" class="text-slate-500 hover:text-accent text-xl"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">&copy; 2026 Prudence Amundu</p>
+    <footer class="py-10 border-t border-slate-800 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://github.com/Cwendee" class="text-slate-500 hover:text-gold text-xl"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/prudence-c-anumudu-35518656/" class="text-slate-500 hover:text-gold text-xl"><i class="fa-brands fa-linkedin"></i></a>
         </div>
+        <p class="text-slate-600 text-xs tracking-widest">&copy; 2026 Prudence Anumudu</p>
     </footer>
 </body>
 </html>

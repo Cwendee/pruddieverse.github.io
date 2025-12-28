@@ -1,21 +1,16 @@
 {{ define "main" }}
 <div class="space-y-12">
-    <header class="border-b border-slate-800 pb-8">
-        <h1 class="text-4xl font-black text-accent mb-4">{{ .Title }}</h1>
-        <p class="text-xl text-slate-400">{{ .Description }}</p>
+    <header class="pb-8">
+        <p class="text-xl text-slate-400 font-medium">Showcasing my journey into DevOps and Cloud Engineering.</p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 gap-8">
         {{ range .Pages }}
-        <a href="{{ .RelPermalink }}" class="block p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-accent transition-all group">
-            <h2 class="text-2xl font-bold text-white group-hover:text-accent mb-4">{{ .Title }}</h2>
-            <p class="text-slate-400 line-clamp-3">{{ .Summary }}</p>
-            <div class="mt-6 text-accent font-bold text-sm uppercase tracking-widest">View Project →</div>
+        <a href="{{ .RelPermalink }}" class="block p-8 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-gold/50 transition-all group">
+            <h2 class="text-2xl font-brand italic text-gold group-hover:text-white mb-4">{{ .Title }}</h2>
+            <p class="text-slate-400 leading-relaxed">{{ .Summary }}</p>
+            <div class="mt-6 text-accent text-sm font-bold tracking-widest uppercase">View Case Study &rarr;</div>
         </a>
-        {{ else }}
-        <div class="col-span-full p-12 rounded-2xl border-2 border-dashed border-slate-800 text-center">
-            <p class="text-slate-500 italic text-lg">Project 1 (The Static Site) is being documented. Project 2 (The Load Balancer) is coming soon!</p>
-        </div>
         {{ end }}
     </div>
 </div>
