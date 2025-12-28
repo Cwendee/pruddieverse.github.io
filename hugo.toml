@@ -11,9 +11,10 @@ title = "Pruddieverse"
   colorScheme = "blowfish"
   fontFamily = "inter"
   
-  # This section activates the homepage layout
-  [params.home]
-    type = "hero"
+  # This is the section that actually "turns on" the home page text
+  [params.homepage]
+    layout = "page"
+    showRecent = true
 
   [params.hero]
     title = "Building the Pruddieverse."
