@@ -1,28 +1,27 @@
 {{ define "main" }}
 <section class="text-center md:text-left">
-    <div class="flex flex-col md:flex-row items-center gap-10">
-        <div class="w-40 h-40 shrink-0">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-48 h-48 md:w-64 md:h-64 shrink-0">
             {{ $img := resources.Get "headshot.jpg" }}
             {{ if $img }}
-                <img src="{{ $img.RelPermalink }}" alt="Prudence Anumudu" class="rounded-2xl border-2 border-gold/50 object-cover w-full h-full shadow-lg shadow-gold/5">
+                <img src="{{ $img.RelPermalink }}" alt="Prudence Anumudu" class="rounded-2xl border-2 border-gold/30 object-cover w-full h-full shadow-2xl">
             {{ end }}
         </div>
         <div>
-            <h1 class="font-brand text-4xl text-white mb-2 italic">Building the Pruddieverse</h1>
-            <h2 class="text-xl text-gold font-semibold mb-4">Prudence Anumudu</h2>
+            <h1 class="font-brand text-5xl text-white mb-3 italic">Building the Pruddieverse</h1>
+            <h2 class="text-2xl text-gold font-semibold mb-6">Prudence Anumudu</h2>
+            <div class="max-w-xl">
+                <p class="text-lg leading-relaxed text-slate-300">
+                    I’m a tech professional transitioning from customer service into building, automating, and scaling reliable systems.<br><br>
+                    I bring a people-first mindset into infrastructure and cloud solutions because great systems should work seamlessly for the people who use them.
+                </p>
+            </div>
         </div>
-    </div>
-
-    <div class="mt-8 max-w-2xl">
-        <p class="text-lg leading-relaxed text-slate-300">
-            I’m a tech professional transitioning from customer service into building, automating, and scaling reliable systems.<br><br>
-            I bring a people-first mindset into infrastructure and cloud solutions because great systems should work seamlessly for the people who use them.
-        </p>
     </div>
 </section>
 
-<div class="mt-16 border-t border-slate-800 pt-8">
-    <div class="flex flex-wrap justify-center md:justify-start gap-6">
+<div class="mt-16 border-t border-slate-800/50 pt-8">
+    <div class="flex flex-wrap justify-center md:justify-start gap-8">
         {{ range (slice 
             (dict "n" "AWS" "i" "fa-brands fa-aws") 
             (dict "n" "Terraform" "i" "fa-solid fa-code") 
@@ -32,17 +31,17 @@
             (dict "n" "Linux" "i" "fa-brands fa-linux")
         ) }}
         <div class="flex items-center gap-2 text-slate-500 hover:text-accent transition-all">
-            <i class="{{ .i }} text-base"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest">{{ .n }}</span>
+            <i class="{{ .i }} text-lg"></i>
+            <span class="text-[11px] font-bold uppercase tracking-[0.2em]">{{ .n }}</span>
         </div>
         {{ end }}
     </div>
 </div>
 
-<div class="mt-16 flex justify-center md:justify-start">
-    <a href="/projects/" class="text-sm font-semibold text-slate-400 hover:text-white transition-all flex items-center group">
+<div class="mt-16 flex justify-end">
+    <a href="/projects/" class="text-[11px] uppercase tracking-[0.3em] text-slate-500 hover:text-gold transition-all flex items-center group">
         Explore the laboratory 
-        <span class="ml-2 text-accent group-hover:translate-x-1 transition-transform">&rarr;</span>
+        <span class="ml-4 text-accent group-hover:translate-x-3 transition-transform duration-300">———————&rarr;</span>
     </a>
 </div>
 {{ end }}

@@ -1,5 +1,5 @@
 ---
-title: "Project 1: Automated Multi-Node Infrastructure Orchestration"
+title: "Automated Multi-Node Infrastructure Orchestration"
 date: 2025-12-28
 summary: "Architected and deployed a scalable web infrastructure on AWS using Ansible to replace manual configuration with Infrastructure as Code (IaC)."
 ---

@@ -1,8 +1,24 @@
 {{ define "main" }}
-<div class="bg-slate-900/40 p-10 rounded-2xl border border-slate-800 shadow-2xl">
-    <h1 class="text-accent text-4xl font-black mb-8">{{ .Title }}</h1>
-    <div class="prose prose-slate prose-invert max-w-none text-slate-300 text-lg leading-relaxed">
+<article class="max-w-2xl mx-auto">
+    <header class="mb-12 border-b border-slate-800 pb-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-brand italic text-white mb-6">{{ .Title }}</h1>
+        <div class="text-gold text-xs uppercase tracking-[0.3em] font-bold">Technical Case Study</div>
+    </header>
+
+    <div class="prose prose-invert prose-slate max-w-none 
+                prose-headings:font-brand prose-headings:italic prose-headings:text-gold prose-headings:font-normal
+                prose-p:text-slate-300 prose-p:leading-loose prose-p:text-lg
+                prose-li:text-slate-300 prose-li:leading-relaxed">
         {{ .Content }}
     </div>
-</div>
+
+    <div class="mt-20 pt-10 border-t border-slate-800 flex justify-between items-center">
+        <a href="/projects/" class="text-xs uppercase tracking-widest text-slate-500 hover:text-accent">&larr; Back to Laboratory</a>
+        <div class="flex space-x-4">
+             <span class="h-1 w-1 rounded-full bg-slate-700"></span>
+             <span class="h-1 w-1 rounded-full bg-slate-700"></span>
+             <span class="h-1 w-1 rounded-full bg-slate-700"></span>
+        </div>
+    </div>
+</article>
 {{ end }}
