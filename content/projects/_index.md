@@ -1,6 +1,5 @@
 ---
 title: "The Pruddieverse"
-description: "Professional Portfolio of a Cloud & DevOps Engineer"
 layout: "hero"
 ---
 
