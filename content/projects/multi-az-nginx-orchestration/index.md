@@ -6,7 +6,6 @@ thumbnail: "images/server-01.png"
 ---
 
 A high-availability web architecture deployed on AWS using Ansible for automated configuration management. This project demonstrates fault tolerance by distributing traffic across multiple Availability Zones.
-
 ## 🏗️ Architecture
 - **Infrastructure:** Custom AWS VPC across 2 Availability Zones (AZs) for fault tolerance.
 - **Load Balancer:** 1 Ubuntu EC2 instance running Nginx as a Reverse Proxy.
