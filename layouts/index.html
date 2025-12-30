@@ -1,21 +1,18 @@
 {{ define "main" }}
-<section class="flex flex-col md:flex-row items-center gap-12 py-10">
-    <div class="w-64 h-auto shrink-0">
-        {{ $img := resources.Get "headshot.jpg" }}
-        {{ if $img }}
-            <img src="{{ $img.RelPermalink }}" alt="Prudence Anumudu" class="rounded-2xl border border-white/10 shadow-2xl w-full h-auto">
-        {{ end }}
-    </div>
-    <div class="text-center md:text-left">
-        <h1 class="text-3xl md:text-4xl font-heading mb-2">Building the Pruddieverse</h1>
-        <h2 class="text-xl text-[1.1rem] text-gold font-medium mb-6 italic">Prudence Anumudu</h2>
-        <p class="text-lg text-slate-400 italic font-light">"I don’t just solve technical problems; I bridge the gap between human needs and automated solutions."</p>
-    </div>
-</section>
+<div class="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
+  <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 max-w-4xl leading-[0.9]">
+    Building the Pruddieverse
+  </h1>
+  
+  <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 font-normal">
+    I don’t just solve technical problems; I bridge the gap between human needs and automated solutions.
+  </p>
 
-<div class="mt-24 flex justify-center">
-    <a href="/projects/" class="text-[11px] uppercase tracking-[0.3em] text-slate-500 hover:text-gold flex items-center group transition-all">
-        Explore the laboratory <span class="ml-4 text-accent group-hover:translate-x-3 transition-all">———————&rarr;</span>
+  <div class="flex justify-center">
+    <a href="/projects/" class="group flex items-center gap-3 text-xs uppercase tracking-[0.3em] font-bold text-accent hover:text-white transition-all">
+      Explore the Laboratory 
+      <span class="group-hover:translate-x-2 transition-transform">———&rarr;</span>
     </a>
+  </div>
 </div>
 {{ end }}
