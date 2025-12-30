@@ -6,21 +6,21 @@
     <description>Recent content in The Pruddieverse on Pruddieverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.pruddieverse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi-AZ Nginx Orchestration</title>
+      <link>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</guid>
+      <description>A high-availability web architecture deployed on AWS using Ansible for automated configuration management. This project demonstrates fault tolerance by distributing traffic across multiple Availability Zones.&#xA;🏗️ Architecture Infrastructure: Custom AWS VPC across 2 Availability Zones (AZs) for fault tolerance. Load Balancer: 1 Ubuntu EC2 instance running Nginx as a Reverse Proxy. Web Tier: 2 Ubuntu EC2 instances serving unique content to verify load distribution. Automation: Ansible playbooks for zero-touch deployment and configuration.</description>
+    </item>
     <item>
       <title>Automated Multi-Node Infrastructure</title>
       <link>https://www.pruddieverse.com/projects/automated-multi-node-infra/</link>
       <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://www.pruddieverse.com/projects/automated-multi-node-infra/</guid>
       <description>Moving from manual configurations to automated orchestration with Ansible on AWS.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</guid>
-      <description>Multi-AZ Nginx Orchestration with Ansible A high-availability web architecture deployed on AWS using Ansible for automated configuration management. This project demonstrates the ability to design, provision, and orchestrate a distributed system that remains resilient and secure.&#xA;🏗️ Architecture Infrastructure: Custom AWS VPC across 2 Availability Zones (AZs) for fault tolerance. Load Balancer: 1 Ubuntu EC2 instance running Nginx as a Reverse Proxy. Web Tier: 2 Ubuntu EC2 instances serving unique content to verify load distribution.</description>
     </item>
     <item>
       <title>Let&#39;s Connect</title>
