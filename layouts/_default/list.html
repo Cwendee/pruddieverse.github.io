@@ -1,16 +1,12 @@
 {{ define "main" }}
-<h1 class="text-3xl font-heading mb-12 text-accent uppercase tracking-widest">The Laboratory</h1>
-
-<div class="space-y-24">
+<h1 class="mb-16 uppercase tracking-[0.2em] text-accent text-xl">The Laboratory</h1>
+<div class="grid grid-cols-1 gap-12">
   {{ range .Pages }}
-  <article class="border-l-2 border-white/5 pl-8">
-    <h2 class="text-2xl font-bold text-gold mb-4">{{ .Title }}</h2>
-    <p class="text-slate-400 leading-relaxed mb-6">
-      {{ .Summary }}
-    </p>
-    
-    <a href="{{ .Permalink }}" class="inline-block text-[10px] uppercase tracking-[0.2em] text-accent font-bold border border-accent/30 px-6 py-3 hover:bg-accent hover:text-midnight transition-all">
-      Open Case Study &rarr;
+  <article class="border border-white/10 p-10 bg-white/5 hover:border-accent/40 transition-all">
+    <h2 class="text-gold text-xl font-bold mb-4 uppercase tracking-wide">{{ .Title }}</h2>
+    <p class="text-slate-400 mb-8">{{ .Summary }}</p>
+    <a href="{{ .Permalink }}" class="text-[10px] uppercase tracking-[0.2em] text-accent font-bold hover:text-white transition-colors">
+      Open Case Study ———&rarr;
     </a>
   </article>
   {{ end }}
