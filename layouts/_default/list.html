@@ -3,7 +3,7 @@
   {{ range .Pages }}
   <article class="border border-white/10 p-10 bg-white/5 aspect-square flex flex-col justify-center items-center text-center group hover:border-accent/40 transition-all">
     <h2 class="text-gold text-lg font-bold mb-4 uppercase tracking-widest">{{ .Title }}</h2>
-    <p class="text-slate-400 mb-8 text-sm leading-relaxed px-4">
+    <p class="text-slate-400 mb-8 text-sm px-4">
       {{ .Summary }}
     </p>
     <a href="{{ .Permalink }}" class="text-[10px] uppercase tracking-[0.2em] text-accent font-bold group-hover:text-white transition-colors">

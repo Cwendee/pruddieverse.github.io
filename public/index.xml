@@ -10,30 +10,16 @@
     <atom:link href="https://www.pruddieverse.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Multi-AZ Nginx Orchestration</title>
-      <link>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</link>
+      <link>https://www.pruddieverse.com/projects/project2/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</guid>
-      <description>A high-availability web architecture deployed on AWS using Ansible for automated configuration management. This project demonstrates fault tolerance by distributing traffic across multiple Availability Zones.&#xA;🏗️ Architecture Infrastructure: Custom AWS VPC across 2 Availability Zones (AZs) for fault tolerance. Load Balancer: 1 Ubuntu EC2 instance running Nginx as a Reverse Proxy. Web Tier: 2 Ubuntu EC2 instances serving unique content to verify load distribution. Automation: Ansible playbooks for zero-touch deployment and configuration.</description>
-    </item>
-    <item>
-      <title>Multi-AZ Nginx Orchestration</title>
-      <link>https://www.pruddieverse.com/projects/nginx-orchestration/</link>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.pruddieverse.com/projects/nginx-orchestration/</guid>
+      <guid>https://www.pruddieverse.com/projects/project2/</guid>
       <description>A high-availability web architecture deployed on AWS using Ansible for automated configuration management.</description>
     </item>
     <item>
       <title>Automated Multi-Node Infrastructure</title>
-      <link>https://www.pruddieverse.com/projects/automated-multi-node-infra/</link>
+      <link>https://www.pruddieverse.com/projects/project1/</link>
       <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.pruddieverse.com/projects/automated-multi-node-infra/</guid>
-      <description>Moving from manual configurations to automated orchestration with Ansible on AWS.</description>
-    </item>
-    <item>
-      <title>Automated Multi-Node Infrastructure</title>
-      <link>https://www.pruddieverse.com/projects/multi-node/</link>
-      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.pruddieverse.com/projects/multi-node/</guid>
+      <guid>https://www.pruddieverse.com/projects/project1/</guid>
       <description>Moving from manual configurations to automated orchestration with Ansible on AWS.</description>
     </item>
     <item>
