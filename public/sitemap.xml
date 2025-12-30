@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.pruddieverse.com/projects/ansible-config/</loc>
+    <loc>https://www.pruddieverse.com/projects/automated-multi-node-infra/</loc>
     <lastmod>2025-12-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.pruddieverse.com/projects/</loc>
@@ -10,6 +10,8 @@
   </url><url>
     <loc>https://www.pruddieverse.com/</loc>
     <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pruddieverse.com/projects/multi-az-nginx-orchestration/</loc>
   </url><url>
     <loc>https://www.pruddieverse.com/categories/</loc>
   </url><url>
