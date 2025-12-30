@@ -1,17 +1,18 @@
 {{ define "main" }}
-<div class="space-y-12">
-    <header class="pb-8">
-        <p class="text-xl text-slate-400 font-medium italic">Showcasing my journey into DevOps and Cloud Engineering.</p>
-    </header>
+<h1 class="text-3xl font-heading mb-12 text-accent uppercase tracking-widest">The Laboratory</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {{ range .Pages }}
-        <a href="{{ .RelPermalink }}" class="aspect-square flex flex-col justify-center p-10 rounded-xl bg-slate-900/20 border border-slate-800 hover:border-gold/40 transition-all group">
-            <h2 class="text-2xl font-brand italic text-gold group-hover:text-white mb-4">{{ .Title }}</h2>
-            <p class="text-sm text-slate-400 leading-relaxed line-clamp-4">{{ .Summary }}</p>
-            <div class="mt-8 text-accent text-[10px] font-black uppercase tracking-[0.2em]">Open Case Study &mdash;&mdash;&rarr;</div>
-        </a>
-        {{ end }}
-    </div>
+<div class="space-y-24">
+  {{ range .Pages }}
+  <article class="border-l-2 border-white/5 pl-8">
+    <h2 class="text-2xl font-bold text-gold mb-4">{{ .Title }}</h2>
+    <p class="text-slate-400 leading-relaxed mb-6">
+      {{ .Summary }}
+    </p>
+    
+    <a href="{{ .Permalink }}" class="inline-block text-[10px] uppercase tracking-[0.2em] text-accent font-bold border border-accent/30 px-6 py-3 hover:bg-accent hover:text-midnight transition-all">
+      Open Case Study &rarr;
+    </a>
+  </article>
+  {{ end }}
 </div>
 {{ end }}
