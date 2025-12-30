@@ -13,8 +13,6 @@ A high-availability web architecture deployed on AWS using Ansible for automated
 - **Web Tier:** 2 Ubuntu EC2 instances serving unique content to verify load distribution.
 - **Automation:** Ansible playbooks for zero-touch deployment and configuration.
 
-
-
 ## 🚀 Key Features
 - **High Availability:** Distributed nodes across multiple AZs to prevent single points of failure.
 - **Security:** Layered Security Groups (LB accepts public HTTP/SSH; App Nodes are restricted to internal traffic).
@@ -28,8 +26,17 @@ A high-availability web architecture deployed on AWS using Ansible for automated
 
 ---
 
-### 🔍 Verification & Traffic Distribution
-The following screenshots demonstrate the Load Balancer successfully distributing traffic across both Availability Zones.
+### 🌐 Load Balancer Verification
+The following screenshots demonstrate the Nginx Load Balancer successfully distributing traffic across both Availability Zones.
+
+| LB Request: Node 01 (AZ-1a) | LB Request: Node 02 (AZ-1b) |
+|---|---|
+| ![Traffic 01](images/lb-traffic-01.png) | ![Traffic 02](images/lb-traffic-02.png) |
+
+---
+
+### 🔍 Infrastructure Proof
+Individual node verification ensures that each application server is healthy.
 
 | App Server 01 (AZ: us-east-1a) | App Server 02 (AZ: us-east-1b) |
 |---|---|
@@ -40,19 +47,17 @@ The following screenshots demonstrate the Load Balancer successfully distributin
 ## 🛠️ Troubleshooting & Engineering Insights
 
 ### 1. The 504 Gateway Timeout (Connectivity "Wall")
-**Issue:** After initial configuration, the Load Balancer returned a `504 Gateway Timeout`.
-**Diagnosis:** Identified that while the LB was alive, it couldn't "see" the application nodes.
+**Issue:** Load Balancer returned a `504 Gateway Timeout`.
 **Resolution:** Updated the Web Tier Security Group to allow Inbound HTTP traffic (Port 80) specifically from the Load Balancer's Security Group ID.
 ![LB Timeout Error](images/troubleshooting-lb-timeout.png)
 
 ### 2. Ansible Connection Timeout (SSH Locking)
-**Issue:** During the final UI deployment, the terminal reported `UNREACHABLE` for the Load Balancer node.
-**Diagnosis:** My local ISP had rotated my Public IP, and the AWS Security Group was still configured to allow the old IP.
-**Engineering Takeaway:** I chose to document this error rather than hide it. It highlights a successful security posture (Zero Trust) where unauthorized or unrecognized IPs are blocked by default.
+**Issue:** Terminal reported `UNREACHABLE` for the Load Balancer node.
+**Engineering Takeaway:** Identified a rotated Public IP at the local level. Successfully demonstrated a "Zero Trust" security posture where unrecognized IPs are blocked.
 ![AWS Console Setup](images/aws-console-setup.png)
 
 ---
 
 ## 📈 Future Game Plan
 - **Project 3:** Implement real-time monitoring using **Prometheus and Grafana**.
-- **Project 4:** Refactor the entire infrastructure using **Terraform** for full Infrastructure as Code (IaC).
+- **Project 4:** Refactor the entire infrastructure using **Terraform**.
