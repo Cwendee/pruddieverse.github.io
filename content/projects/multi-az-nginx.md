@@ -28,11 +28,6 @@ The design utilizes an Nginx Load Balancer to distribute traffic between two bac
 **Challenge:** Terminal reported `UNREACHABLE` for the Load Balancer node during a playbook run.
 **Resolution:** Audited SSH key paths and confirmed that the inventory file was using the correct Elastic IP. Implemented `ssh-agent` forwarding to streamline future connections.
 
-## 🚀 Verification
-The following screenshot demonstrates the Load Balancer successfully cycling traffic between Server 1 and Server 2.
-
-![LB Verification](/images/lb-traffic.png)
-
 ## 🛠 Tech Stack
 * **Proxy/LB:** Nginx
 * **Infrastructure:** AWS EC2 (Ubuntu)
