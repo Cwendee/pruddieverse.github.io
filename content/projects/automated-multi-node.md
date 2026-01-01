@@ -26,10 +26,9 @@ To demonstrate scalability, I designed a 1-to-2 orchestration flow. This ensures
 * **Version Control:** Git
 
 ## 🚀 Execution & Verification
-For a deep dive into the technical execution, including terminal logs showing the Ansible playbook runs and the final live service verification, please visit the [GitHub Repository]({{< var github_link >}}).
+For a deep dive into the technical execution, including terminal logs showing the Ansible playbook runs and the final live service verification, please visit the [GitHub Repository](https://github.com/Cwendee/ansible-web-orchestration-lab).
 
 ## 💡 Key Learning Moments
 1. **SSH Key Management:** Secure communication between cloud instances.
 2. **Regex Implementation:** Handle case-insensitive text replacement.
 3. **Security Best Practices:** Redacted sensitive IP addresses.
- 
