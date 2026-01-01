@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="max-w-3xl mx-auto px-4 py-24 text-center">
+  <div class="text-xl text-slate-400 mb-16 font-light leading-relaxed">
+    {{ .Content }}
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <a href="{{ .Site.Params.linkedin }}" target="_blank" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent">LinkedIn</a>
+    <a href="{{ .Site.Params.github }}" target="_blank" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent">GitHub</a>
+    <a href="mailto:{{ .Site.Params.email }}" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent">Email</a>
+  </div>
+</div>
+{{ end }}
