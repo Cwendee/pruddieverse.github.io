@@ -4,11 +4,12 @@ title: "The Journey to Pruddieverse"
 
 ### The Evolution: Resilience in Motion
 
-My career didn't begin with code; it began with **people**. Starting in **Customer Service**, I learned to navigate high-pressure environments and solve problems in real-time. That curiosity and drive for growth led me into **Service Assurance** at Red Star Express (FedEx), where I ensure operational excellence.
+I didn’t begin my career with code; I began with **people**. As a Customer Service professional across health, e-commerce, and transportation & logistics, I have engaged customers in person, over the phone, and via email. These experiences sharpened my ability to **think on my feet**, **solve problems in real time**, and **perform under pressure**. The curiosity and drive for growth led me into Service Assurance at Red Star Express (FedEx), where I support operational excellence and reliable service delivery.
 
 ### The Pivot: Driven by Curiosity
 
-I have always had an unending quest for knowledge. While others saw a workflow, I saw a system that could be optimized. This determination—this need to understand the "how" and the "why"—is what pulled me into the world of **DevOps**. I am not just transitioning into tech; I am bringing a decade of resilience and a "solution-first" mindset to the cloud.
+Curiosity has always shaped how I work. Beyond following workflows, I focus on understanding systems and how they can be optimized. This drive to explore the "how" and "why" led me into DevOps. As I transition into tech, I bring with me years of **resilience**, **operational thinking**, and a **solution-first mindset** applied to cloud environments.
+
 
 ### 💼 Work Experience
 - **AWS Technical Mentor (Volunteer)** | ALX Africa, Oct 2025 – Present
