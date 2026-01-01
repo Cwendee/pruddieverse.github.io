@@ -1,5 +1,5 @@
 ---
-title: "Project 2: Multi-AZ Nginx Orchestration"
+title: "Multi-AZ Nginx Orchestration"
 date: 2025-12-30
 layout: "single"
 summary: "A high-availability web architecture deployed on AWS using Ansible for automated configuration management."
@@ -8,8 +8,6 @@ summary: "A high-availability web architecture deployed on AWS using Ansible for
 # Multi-AZ Nginx Orchestration with Ansible
 
 A high-availability web architecture deployed on AWS using Ansible for automated configuration management.
-
-[GitHub link to view source code](https://github.com/Cwendee/multi-az-nginx-orchestration)
 
 ## 🏗️ Architecture
 - **Infrastructure:** Custom AWS VPC across 2 Availability Zones (AZs).
@@ -25,3 +23,5 @@ A high-availability web architecture deployed on AWS using Ansible for automated
 ### 2. Ansible Connection Timeout
 **Issue:** Terminal reported UNREACHABLE for the Load Balancer node.
 **Fix:** Audited SSH keys and ensured inventory matched dynamic IPs.
+
+<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" target="_blank" class="explore-button">🚀 Explore Project</a>

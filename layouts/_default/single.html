@@ -1,18 +1,39 @@
 {{ define "main" }}
+<style>
+  .explore-button {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1rem 2.5rem;
+    background: #fbbf24;
+    color: #0f172a;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .explore-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.4);
+    background: white;
+  }
+</style>
+
 <article class="max-w-4xl mx-auto px-4 py-20">
   <header class="mb-12">
-    <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-white">{{ .Title }}</h1>
+    <h1 class="text-4xl md:text-7xl font-bold tracking-tighter mb-6 text-white leading-[0.85]">{{ .Title }}</h1>
     <div class="h-1 w-20 bg-accent"></div>
   </header>
 
-  <div class="prose prose-invert prose-slate max-w-none text-slate-300 leading-relaxed">
+  <div class="prose prose-invert prose-slate max-w-none text-slate-300 text-lg leading-relaxed">
     {{ .Content }}
   </div>
 
   <div class="mt-20 pt-10 border-t border-white/5 text-center">
-    <a href="/projects/" class="text-accent hover:text-white uppercase tracking-widest text-xs font-bold">
-      &larr; Return to The Laboratory
+    <a href="/projects/" class="text-accent hover:text-white uppercase tracking-[0.3em] text-xs font-bold">
+      &larr; Return to Laboratory
     </a>
   </div>
-</div>
+</article>
 {{ end }}

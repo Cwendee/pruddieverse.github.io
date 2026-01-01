@@ -1,5 +1,5 @@
 ---
-title: "Project 1: Automated Multi-Node Infrastructure"
+title: "Automated Multi-Node Infrastructure"
 date: 2025-12-28
 layout: "single"
 summary: "Moving from manual configurations to automated orchestration with Ansible on AWS."
@@ -8,8 +8,6 @@ summary: "Moving from manual configurations to automated orchestration with Ansi
 # Ansible Web Orchestration Lab 🚀
 
 This repository documents a hands-on project in **Infrastructure as Code (IaC)**. I built a multi-node environment where a single Ansible Master node orchestrates the deployment and deep customization of professional web servers across an AWS EC2 cluster.
-
-[GitHub link to view source code](https://github.com/Cwendee/ansible-projects)
 
 ## 🎯 Project Goals
 * **Automate** the installation of Apache (httpd) and Git.
@@ -27,3 +25,5 @@ This repository documents a hands-on project in **Infrastructure as Code (IaC)**
 1. **SSH Key Management:** Secure communication between cloud instances.
 2. **Regex Implementation:** Handle case-insensitive text replacement.
 3. **Security Best Practices:** Redacted sensitive IP addresses.
+
+<a href="https://github.com/Cwendee/ansible-projects" target="_blank" class="explore-button">🚀 Explore Project</a>
