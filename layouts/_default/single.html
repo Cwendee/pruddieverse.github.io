@@ -1,11 +1,18 @@
 {{ define "main" }}
-<article class="content-area">
-    <h1 class="text-4xl md:text-5xl mb-12">{{ .Title }}</h1>
-    <div class="text-slate-300">
-        {{ .Content }}
-    </div>
-    <div class="mt-20 pt-10 border-t border-white/5">
-        <a href="javascript:history.back()" class="text-xs uppercase tracking-widest text-accent hover:text-gold">&larr; Go Back</a>
-    </div>
-</article>
+<article class="max-w-4xl mx-auto px-4 py-20">
+  <header class="mb-12">
+    <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-white">{{ .Title }}</h1>
+    <div class="h-1 w-20 bg-accent"></div>
+  </header>
+
+  <div class="prose prose-invert prose-slate max-w-none text-slate-300 leading-relaxed">
+    {{ .Content }}
+  </div>
+
+  <div class="mt-20 pt-10 border-t border-white/5 text-center">
+    <a href="/projects/" class="text-accent hover:text-white uppercase tracking-widest text-xs font-bold">
+      &larr; Return to The Laboratory
+    </a>
+  </div>
+</div>
 {{ end }}
