@@ -7,17 +7,17 @@
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
     {{ range .Pages }}
-    <a href="{{ .Permalink }}" class="group block">
-      <div class="aspect-video mb-6 bg-slate-800/40 border border-white/5 rounded-2xl flex items-center justify-center p-8 transition-all group-hover:bg-slate-800/60 group-hover:border-slate-500/50">
-        <span class="text-slate-500 font-mono text-xs tracking-[0.3em] uppercase group-hover:text-slate-300 transition-colors text-center px-4">
+    <a href="{{ .Permalink }}" class="group block p-8 bg-slate-800/40 border border-white/5 rounded-2xl transition-all hover:bg-slate-800/60 hover:border-slate-500/50">
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold text-white group-hover:text-accent transition-colors">
           {{ .Title }}
-        </span>
-      </div>
-
-      <div class="space-y-3">
-        <h2 class="text-2xl font-bold text-white group-hover:text-accent transition-colors">{{ .Title }}</h2>
-        <p class="text-slate-400 font-light italic leading-relaxed">{{ .Summary }}</p>
-        <div class="flex items-center gap-4 text-accent text-xs font-bold uppercase tracking-[0.3em] pt-2">
+        </h2>
+        
+        <p class="text-slate-400 font-light italic leading-relaxed">
+          {{ .Summary }}
+        </p>
+        
+        <div class="flex items-center gap-4 text-accent text-xs font-bold uppercase tracking-[0.3em] pt-4">
           Open Case Study <span class="group-hover:translate-x-3 transition-transform">———&rarr;</span>
         </div>
       </div>
