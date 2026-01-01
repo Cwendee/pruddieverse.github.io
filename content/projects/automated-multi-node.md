@@ -9,9 +9,13 @@ github_link: "https://github.com/Cwendee/ansible-web-orchestration-lab"
 This repository documents a hands-on project in **Infrastructure as Code (IaC)**. I built a multi-node environment where a single Ansible Master node orchestrates the deployment and deep customization of professional web servers across an AWS EC2 cluster.
 
 ## 🏗️ System Architecture
-To demonstrate scalability, I designed a 1-to-2 orchestration flow. This ensures that configurations remain consistent across a fleet of servers simultaneously.
+![Architecture](/images/architecture.png)
 
-![Ansible Orchestration Architecture](/images/ansible-orchestration-architecture.png)
+## 🚀 Execution & Verification
+![Terminal](/images/terminal.png)
+
+### Live Service Verification
+![Webpage](/images/webpage.png)
 
 ## 🎯 Project Goals
 * **Automate** the installation of Apache (httpd) and Git.
