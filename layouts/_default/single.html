@@ -5,16 +5,16 @@
     margin-top: 3rem;
     padding: 1rem 2.5rem;
     background: #fbbf24;
-    color: #0f172a;
+    color: #0f172a !important;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-radius: 9999px;
     transition: all 0.3s ease;
-    text-decoration: none;
+    text-decoration: none !important;
   }
   .explore-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.4);
     background: white;
   }
@@ -28,6 +28,12 @@
 
   <div class="prose prose-invert prose-slate max-w-none text-slate-300 text-lg leading-relaxed">
     {{ .Content }}
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="{{ .Params.github_link }}" target="_blank" class="explore-button">
+      🚀 Explore Project
+    </a>
   </div>
 
   <div class="mt-20 pt-10 border-t border-white/5 text-center">
