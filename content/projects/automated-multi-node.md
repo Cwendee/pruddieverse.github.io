@@ -32,3 +32,4 @@ For a deep dive into the technical execution, including terminal logs showing th
 1. **SSH Key Management:** Secure communication between cloud instances.
 2. **Regex Implementation:** Handle case-insensitive text replacement.
 3. **Security Best Practices:** Redacted sensitive IP addresses.
+ 
