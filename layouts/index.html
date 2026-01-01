@@ -9,15 +9,40 @@
     Building the Pruddieverse
   </h1>
   
-  <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 font-normal leading-relaxed">
+  <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-4 font-normal leading-relaxed">
     I don’t just solve technical problems; I bridge the gap between human needs and automated solutions.
   </p>
 
-  <div class="flex justify-center">
+  <div class="py-12 w-full max-w-3xl">
+    <div class="flex flex-wrap justify-center gap-3">
+      {{ range .Site.Params.skills }}
+      <span class="px-4 py-2 bg-slate-800/50 border border-white/5 rounded-full text-xs font-mono tracking-widest text-slate-300 hover:border-accent/50 transition-colors">
+        {{ . }}
+      </span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="flex justify-center mt-4">
     <a href="/projects/" class="group flex items-center gap-4 text-xs uppercase tracking-[0.3em] font-bold text-accent hover:text-white transition-all">
       Explore the Laboratory 
       <span class="group-hover:translate-x-3 transition-transform">———&rarr;</span>
     </a>
   </div>
 </div>
+
+<section id="contact" class="py-24 border-t border-white/5">
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold mb-6 tracking-tighter">Let's Connect</h2>
+    <p class="text-slate-400 mb-10 text-lg font-light">
+      I am open to discussing DevOps, Cloud Architecture, and mentorship opportunities 💻✨. Feel free to reach out through any of the platforms below 📬🌐.
+    </p>
+    
+    <div class="flex justify-center gap-8">
+      <a href="{{ .Site.Params.linkedin }}" target="_blank" class="text-slate-400 hover:text-accent transition-colors">LinkedIn</a>
+      <a href="{{ .Site.Params.github }}" target="_blank" class="text-slate-400 hover:text-accent transition-colors">GitHub</a>
+      <a href="mailto:{{ .Site.Params.email }}" class="text-slate-400 hover:text-accent transition-colors">Email</a>
+    </div>
+  </div>
+</section>
 {{ end }}
