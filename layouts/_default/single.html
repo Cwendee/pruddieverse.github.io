@@ -1,32 +1,44 @@
 {{ define "main" }}
 <style>
+  /* Softer, warm grey for the main project titles */
+  .project-title {
+    color: #94a3b8; /* Slate-400 (Soft grey/blue) */
+  }
+
+  /* Sophisticated Steel-Blue Button */
   .explore-button {
     display: inline-block;
     margin-top: 3rem;
     padding: 1rem 2.5rem;
-    background: #fbbf24;
-    color: #0f172a !important;
-    font-weight: 800;
+    background: #334155; /* Slate-700 */
+    color: #f1f5f9 !important; /* Soft white text */
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
+    letter-spacing: 0.15em;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none !important;
   }
+  
   .explore-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.4);
-    background: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+    background: #475569; /* Slightly lighter slate on hover */
+    border-color: #64748b;
+    color: #ffffff !important;
   }
 </style>
 
 <article class="max-w-4xl mx-auto px-4 py-20">
   <header class="mb-12">
-    <h1 class="text-4xl md:text-7xl font-bold tracking-tighter mb-6 text-white leading-[0.85]">{{ .Title }}</h1>
-    <div class="h-1 w-20 bg-accent"></div>
+    <h1 class="text-4xl md:text-7xl font-bold tracking-tighter mb-6 project-title leading-[0.85]">
+      {{ .Title }}
+    </h1>
+    <div class="h-1 w-20 bg-slate-700"></div>
   </header>
 
-  <div class="prose prose-invert prose-slate max-w-none text-slate-300 text-lg leading-relaxed">
+  <div class="prose prose-invert prose-slate max-w-none text-slate-400 text-lg leading-relaxed">
     {{ .Content }}
   </div>
 
@@ -37,7 +49,7 @@
   </div>
 
   <div class="mt-20 pt-10 border-t border-white/5 text-center">
-    <a href="/projects/" class="text-accent hover:text-white uppercase tracking-[0.3em] text-xs font-bold">
+    <a href="/projects/" class="text-slate-500 hover:text-accent uppercase tracking-[0.3em] text-xs font-bold transition-colors">
       &larr; Return to Laboratory
     </a>
   </div>
