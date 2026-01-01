@@ -6,20 +6,21 @@
     <description>Recent content in The Pruddieverse on Pruddieverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.pruddieverse.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Project 1: Automated Multi-Node Infrastructure</title>
-      <link>https://www.pruddieverse.com/projects/automated-multi-node/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.pruddieverse.com/projects/automated-multi-node/</guid>
-      <description>title: &amp;ldquo;Automated Multi-Node Infrastructure&amp;rdquo; date: 2025-12-28 summary: &amp;ldquo;Moving from manual configurations to automated orchestration with Ansible on AWS.&amp;rdquo; Project Details Detailed case study content goes here.</description>
-    </item>
     <item>
       <title>Project 2: Multi-AZ Nginx Orchestration</title>
       <link>https://www.pruddieverse.com/projects/multi-az-nginx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://www.pruddieverse.com/projects/multi-az-nginx/</guid>
-      <description>title: &amp;ldquo;Multi-AZ Nginx Orchestration&amp;rdquo; date: 2025-12-30 summary: &amp;ldquo;A high-availability web architecture deployed on AWS using Ansible for automated configuration management.&amp;rdquo; Project Details Detailed case study content goes here.</description>
+      <description>A high-availability web architecture deployed on AWS using Ansible for automated configuration management.</description>
+    </item>
+    <item>
+      <title>Project 1: Automated Multi-Node Infrastructure</title>
+      <link>https://www.pruddieverse.com/projects/automated-multi-node/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.pruddieverse.com/projects/automated-multi-node/</guid>
+      <description>Moving from manual configurations to automated orchestration with Ansible on AWS.</description>
     </item>
     <item>
       <title>The Journey to Pruddieverse</title>
