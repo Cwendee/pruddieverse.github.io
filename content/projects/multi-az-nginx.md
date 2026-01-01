@@ -6,19 +6,35 @@ summary: "A high-availability web architecture deployed on AWS using Ansible for
 github_link: "https://github.com/Cwendee/multi-az-nginx-orchestration"
 ---
 
-A high-availability web architecture deployed on AWS using Ansible for automated configuration management. This project demonstrates the ability to design, provision, and orchestrate a distributed system that remains resilient and secure.
+This project demonstrates the design and deployment of a resilient, high-availability web architecture. By distributing workloads across multiple AWS Availability Zones, the system ensures uptime and performance even during localized failures.
 
-## 🏗️ Architecture
-- **Infrastructure:** Custom AWS VPC across 2 Availability Zones (AZs).
-- **Load Balancer:** 1 Ubuntu EC2 instance running Nginx as a Reverse Proxy.
-- **Web Tier:** 2 Ubuntu EC2 instances serving unique content.
-- **Automation:** Ansible playbooks for zero-touch deployment.
+## 🏗️ System Architecture
+The design utilizes an Nginx Load Balancer to distribute traffic between two backend web servers located in separate subnets.
+
+![Load Balancer Architecture](/images/load-balancer-architecture.png)
+
+## 🎯 Key Features
+* **High Availability:** Infrastructure spans 2 Availability Zones (AZs) to prevent a single point of failure.
+* **Reverse Proxy:** Nginx is configured to handle client requests and intelligently route traffic.
+* **Automated Provisioning:** Ansible playbooks handle the complete setup of Nginx and backend configurations.
 
 ## 🛠️ Troubleshooting & Engineering Insights
+
 ### 1. The 504 Gateway Timeout
-**Issue:** After initial configuration, the Load Balancer returned a 504 Gateway Timeout. 
-**Fix:** Audited security group rules and target group health checks.
+**Challenge:** After initial configuration, the Load Balancer returned a 504 Gateway Timeout error.
+**Resolution:** Performed a connectivity audit. Discovered that the backend security groups were not allowing traffic from the Load Balancer's private IP. Updated the inbound rules to permit port 80 traffic only from the Load Balancer, enhancing security.
 
 ### 2. Ansible Connection Timeout
-**Issue:** Terminal reported UNREACHABLE for the Load Balancer node.
-**Fix:** Audited SSH keys and ensured inventory matched dynamic IPs.
+**Challenge:** Terminal reported `UNREACHABLE` for the Load Balancer node during a playbook run.
+**Resolution:** Audited SSH key paths and confirmed that the inventory file was using the correct Elastic IP. Implemented `ssh-agent` forwarding to streamline future connections.
+
+## 🚀 Verification
+The following screenshot demonstrates the Load Balancer successfully cycling traffic between Server 1 and Server 2.
+
+![LB Verification](/images/lb-traffic.png)
+
+## 🛠 Tech Stack
+* **Proxy/LB:** Nginx
+* **Infrastructure:** AWS EC2 (Ubuntu)
+* **Automation:** Ansible
+* **Networking:** VPC, Subnets, Security Groups
