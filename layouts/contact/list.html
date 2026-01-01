@@ -1,12 +1,27 @@
 {{ define "main" }}
 <div class="max-w-3xl mx-auto px-4 py-24 text-center">
+  
   <div class="text-xl text-slate-400 mb-16 font-light leading-relaxed">
-    {{ .Content }}
+    I am open to discussing DevOps, Cloud Architecture, and mentorship opportunities. Feel free to reach out through any of the platforms below.
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <a href="{{ .Site.Params.linkedin }}" target="_blank" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent">LinkedIn</a>
-    <a href="{{ .Site.Params.github }}" target="_blank" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent">GitHub</a>
-    <a href="mailto:{{ .Site.Params.email }}" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent">Email</a>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656/" target="_blank" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent font-bold">
+      LinkedIn
+    </a>
+    <a href="https://github.com/Cwendee" target="_blank" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent font-bold">
+      GitHub
+    </a>
+    <a href="mailto:pruddyanumudu@gmail.com" class="p-8 bg-slate-800/30 border border-white/5 rounded-2xl hover:border-accent/50 transition-all text-accent font-bold">
+      Email
+    </a>
+  </div>
+
+  <div class="mt-12 p-10 border-t border-white/5">
+    <h3 class="text-white mb-4 font-bold">Want to leave a detailed message?</h3>
+    <a href="mailto:pruddyanumudu@gmail.com?subject=Inquiry from Portfolio" class="inline-block px-8 py-4 bg-accent text-primary font-bold rounded-full hover:bg-white transition-colors">
+      Send Message 📬
+    </a>
   </div>
 </div>
 {{ end }}
