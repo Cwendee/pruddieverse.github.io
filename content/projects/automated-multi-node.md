@@ -26,14 +26,7 @@ To demonstrate scalability, I designed a 1-to-2 orchestration flow. This ensures
 * **Version Control:** Git
 
 ## 🚀 Execution & Verification
-The following terminal output demonstrates the Ansible playbook running across the inventory. Notice the "changed" status, indicating the successful application of the desired state.
-
-![Terminal](/images/terminal.png)
-
-### Live Service Verification
-Once the orchestration was complete, I verified the deployment by accessing the public DNS of the managed nodes. 
-
-![Webpage](/images/webpage.png)
+For a deep dive into the technical execution, including terminal logs showing the Ansible playbook runs and the final live service verification, please visit the [GitHub Repository]({{< var github_link >}}).
 
 ## 💡 Key Learning Moments
 1. **SSH Key Management:** Secure communication between cloud instances.
