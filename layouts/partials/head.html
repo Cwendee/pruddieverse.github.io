@@ -1,0 +1,42 @@
+<style>
+  /* 1. FORCE COLORS */
+  :root, html, body, .bg-body, .bg-secondary-bg, main {
+      background-color: #14182d !important;
+      color: #9ca3af !important;
+  }
+  
+  /* CHAMPAGNE GOLD TITLES */
+  h1, .navbar-brand, .text-neutral-900, .dark .text-neutral-100 {
+      color: #F7E7CE !important;
+  }
+
+  /* 2. HEADSHOT: Vertical Rectangle & Curved Edges */
+  .hero-area img, .author-image, img[src*="headshot"] {
+      width: 220px !important;
+      height: 320px !important;
+      object-fit: contain !important; /* Prevents hair from being cut */
+      border-radius: 15px !important;
+      border: 3px solid #2d3748 !important;
+  }
+
+  /* 3. PROJECT CARDS: Separate & Glowing */
+  article {
+      margin-bottom: 2.5rem !important;
+      background-color: #1e233c !important;
+      border-radius: 15px !important;
+      padding: 20px !important;
+      border: 1px solid #2d3748 !important;
+  }
+  article:hover {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.7) !important;
+  }
+
+  /* 4. FOOTER CENTERING */
+  footer .flex-col {
+      align-items: center !important;
+      text-align: center !important;
+  }
+
+  /* NO ITALICS */
+  * { font-style: normal !important; }
+</style>
