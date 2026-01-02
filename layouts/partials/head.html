@@ -1,30 +1,19 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
-  /* 1. GLOBAL COLORS */
+  /* 1. THE FOUNDATION */
   :root, html, body { background-color: #14182d !important; color: #9ca3af !important; }
   
-  /* 2. CHAMPAGNE GOLD TITLES (Pruddieverse & Headers) */
-  h1, .navbar-brand, .text-neutral-900, h1 a, .logo { 
+  /* 2. CHAMPAGNE GOLD FOR ALL TITLES & BRANDING */
+  h1, h2, h3, .navbar-brand, a[href="/"], .logo, [class*="title"] { 
       color: #F7E7CE !important; 
       font-style: normal !important;
       text-decoration: none !important;
   }
 
-  /* 3. HEADSHOT: Filling the box without blue gaps */
-  img[src*="headshot"], .author-image, .hero-area img {
-      width: 250px !important; 
-      height: 350px !important;
-      object-fit: cover !important; /* This fills the box completely */
-      object-position: top !important; /* Keeps the focus on your face/hair */
-      border-radius: 15px !important;
-      border: 3px solid #2d3748 !important;
-      display: block !important;
-  }
-
-  /* 4. SKILLS & CARDS: Separate boxes with Blue Glow */
-  .prose ul li {
+  /* 3. THE SKILLS: Turning plain lists into Glowing Cards */
+  ul { list-style: none !important; padding: 0 !important; display: flex !important; flex-wrap: wrap !important; gap: 10px !important; }
+  li {
       display: inline-block !important;
-      margin: 8px !important;
       padding: 8px 16px !important;
       background-color: #1e233c !important;
       border-radius: 8px !important;
@@ -32,23 +21,43 @@
       color: #9ca3af !important;
       transition: all 0.3s ease !important;
   }
-  
-  .prose ul li:hover {
+  li:hover {
       box-shadow: 0 0 15px rgba(59, 130, 246, 0.6) !important;
       border-color: #3b82f6 !important;
   }
 
-  /* 5. CTA BUTTON (Explore the Laboratory) */
-  .btn-primary, a[href*="projects"] {
+  /* 4. THE PROJECT CARDS: Square with Curved Edges */
+  article, [class*="card"] {
+      margin-bottom: 2.5rem !important;
+      background-color: #1e233c !important;
+      border-radius: 15px !important;
+      padding: 25px !important;
+      border: 1px solid #2d3748 !important;
+      display: block !important;
+  }
+
+  /* 5. THE CTA BUTTON: Grey with Gold Text */
+  a[href*="projects"], .btn, button {
       background-color: #4b5563 !important;
-      color: #F7E7CE !important;
-      padding: 12px 24px !important;
+      color: #F7E7CE !important !important;
+      padding: 12px 28px !important;
       border-radius: 8px !important;
       text-decoration: none !important;
       display: inline-block !important;
       margin-top: 20px !important;
+      border: none !important;
   }
 
-  /* 6. REMOVE ALL ITALICS */
+  /* 6. HEADSHOT: (Keeping your perfect settings) */
+  img[src*="headshot"], .author-image, .hero-area img {
+      width: 250px !important; 
+      height: 350px !important;
+      object-fit: cover !important;
+      object-position: top !important;
+      border-radius: 15px !important;
+      border: 3px solid #2d3748 !important;
+  }
+
+  /* 7. NO ITALICS */
   * { font-style: normal !important; }
 </style>
