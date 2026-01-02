@@ -4,72 +4,63 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* 1. GLOBAL RESET & INTER FONT */
+  /* 1. HIDE THE "SKIP TO MAIN CONTENT" LINK */
+  .screen-reader-text, .skip-link, [href="#content"] {
+      display: none !important;
+      visibility: hidden !important;
+  }
+
+  /* 2. GLOBAL RESET & INTER FONT */
   :root, html, body { 
       background-color: #14182d !important; 
       color: #9ca3af !important; /* GREY TEXT */
       font-family: 'Inter', sans-serif !important;
-      text-align: center !important; /* FORCES EVERYTHING TO MIDDLE */
+      text-align: center !important;
   }
 
-  /* 2. PRUDDIEVERSE LOGO/BUTTON: CHAMPAGNE GOLD */
+  /* 3. PRUDDIEVERSE LOGO: CHAMPAGNE GOLD */
   .navbar-brand, .logo, a[href="/"], .brand-text { 
       color: #F7E7CE !important; 
       font-weight: 700 !important;
       font-size: 1.5rem !important;
       text-decoration: none !important;
+      font-style: normal !important;
   }
 
-  /* 3. HERO STATEMENT & BIO: GREY & CENTERED */
+  /* 4. HERO & BIO: CENTERED GREY */
   h1, .hero-text, .bio-text, p {
       color: #9ca3af !important; 
       max-width: 800px;
       margin: 20px auto !important;
       display: block !important;
+      font-style: normal !important;
   }
 
-  /* 4. SKILL CARDS: CENTERED ICONS/TEXT */
+  /* 5. SKILL CARDS: GREY WITH BLUE GLOW */
   ul { 
       list-style: none !important; 
       padding: 0 !important; 
       display: flex !important; 
       flex-wrap: wrap !important; 
-      justify-content: center !important; /* CENTERS THE CARDS */
+      justify-content: center !important; 
       gap: 15px !important;
       margin: 30px auto !important;
-      max-width: 900px !important;
   }
 
   li {
-      background-color: #1e233c !important; /* Card Background */
-      color: #9ca3af !important; /* Grey Text */
+      background-color: #1e233c !important; 
+      color: #9ca3af !important; 
       border: 1px solid #2d3748 !important;
       border-radius: 8px !important;
       padding: 12px 20px !important;
       transition: all 0.3s ease !important;
-      cursor: pointer;
+      font-style: normal !important;
   }
 
-  /* LIGHT BLUE GLOW ON HOVER/CLICK */
-  li:hover, li:active {
+  li:hover {
       box-shadow: 0 0 15px rgba(59, 130, 246, 0.8) !important;
       border-color: #3b82f6 !important;
-      color: #3b82f6 !important; /* Text turns blue on glow */
-  }
-
-  /* 5. PROJECT CARDS: SQUARE & SEPARATED */
-  article {
-      background-color: #1e233c !important;
-      border-radius: 12px !important;
-      padding: 30px !important;
-      margin: 40px auto !important;
-      max-width: 800px !important;
-      border: 1px solid #2d3748 !important;
-      text-align: left !important; /* Text inside card stays left */
-  }
-
-  article:hover {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.7) !important;
+      color: #3b82f6 !important;
   }
 
   /* 6. HEADSHOT: PERFECTLY CENTERED */
@@ -83,14 +74,17 @@
       display: block !important;
   }
 
-  /* 7. NO ITALICS */
-  * { font-style: normal !important; }
-
-  /* 8. NAVIGATION ALIGNMENT */
-  header nav {
-      display: flex !important;
-      justify-content: center !important;
-      gap: 30px !important;
-      padding: 20px 0 !important;
+  /* 7. PROJECT CARDS: SEPARATED SQUARES */
+  article {
+      background-color: #1e233c !important;
+      border-radius: 12px !important;
+      padding: 30px !important;
+      margin: 40px auto !important;
+      max-width: 800px !important;
+      border: 1px solid #2d3748 !important;
+      text-align: left !important;
   }
+
+  /* 8. REMOVE ALL ITALICS */
+  * { font-style: normal !important; }
 </style>
