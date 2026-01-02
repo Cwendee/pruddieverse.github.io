@@ -1,43 +1,44 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
-  /* FORCE BACKGROUND & TEXT */
+  /* 1. GLOBAL COLORS */
   :root, html, body { background-color: #14182d !important; color: #9ca3af !important; }
   
-  /* CHAMPAGNE GOLD FOR TITLE */
-  .navbar-brand, h1, .text-neutral-900, a[href="/"] { color: #F7E7CE !important; font-style: normal !important; }
-
-  /* SKILLS/CARDS: Separate them and add the blue glow */
-  .prose ul li, .card, article {
-      display: inline-block !important;
-      margin: 10px !important;
-      padding: 10px 20px !important;
-      background-color: #1e233c !important;
-      border-radius: 12px !important;
-      border: 1px solid #2d3748 !important;
-      transition: all 0.3s ease !important;
-  }
-  
-  .prose ul li:hover, article:hover {
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.7) !important;
-      transform: translateY(-3px);
+  /* 2. CHAMPAGNE GOLD TITLES (Pruddieverse & Headers) */
+  h1, .navbar-brand, .text-neutral-900, h1 a, .logo { 
+      color: #F7E7CE !important; 
+      font-style: normal !important;
+      text-decoration: none !important;
   }
 
-  /* HEADSHOT: Vertical Rectangle */
-  img[src*="headshot"], .author-image {
-      width: 220px !important; height: 320px !important;
-      object-fit: contain !important; border-radius: 15px !important;
+  /* 3. HEADSHOT: Filling the box without blue gaps */
+  img[src*="headshot"], .author-image, .hero-area img {
+      width: 250px !important; 
+      height: 350px !important;
+      object-fit: cover !important; /* This fills the box completely */
+      object-position: top !important; /* Keeps the focus on your face/hair */
+      border-radius: 15px !important;
       border: 3px solid #2d3748 !important;
-  }
-
-  /* FOOTER: Centered at the bottom */
-  footer {
-      margin-top: 50px !important;
-      text-align: center !important;
-      width: 100% !important;
       display: block !important;
   }
 
-  /* CTA BUTTON */
+  /* 4. SKILLS & CARDS: Separate boxes with Blue Glow */
+  .prose ul li {
+      display: inline-block !important;
+      margin: 8px !important;
+      padding: 8px 16px !important;
+      background-color: #1e233c !important;
+      border-radius: 8px !important;
+      border: 1px solid #2d3748 !important;
+      color: #9ca3af !important;
+      transition: all 0.3s ease !important;
+  }
+  
+  .prose ul li:hover {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.6) !important;
+      border-color: #3b82f6 !important;
+  }
+
+  /* 5. CTA BUTTON (Explore the Laboratory) */
   .btn-primary, a[href*="projects"] {
       background-color: #4b5563 !important;
       color: #F7E7CE !important;
@@ -45,7 +46,9 @@
       border-radius: 8px !important;
       text-decoration: none !important;
       display: inline-block !important;
+      margin-top: 20px !important;
   }
 
+  /* 6. REMOVE ALL ITALICS */
   * { font-style: normal !important; }
 </style>
