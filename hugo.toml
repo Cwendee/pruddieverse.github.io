@@ -4,6 +4,10 @@ title = "Pruddieverse"
 theme = "github.com/jpanther/congo/v2"
 copyright = "2025 Prudence Anumudu"
 
+# This is the "Magic" fix for the plain HTML text issue
+relativeURLs = true
+canonifyURLs = true
+
 [params]
   colorScheme = "ocean"
   favicon = "favicon.ico"
@@ -13,24 +17,18 @@ copyright = "2025 Prudence Anumudu"
     name = "Pruddie"
     image = "headshot.jpg"
     headline = "Cloud & DevOps Engineer"
-    bio = "Building the Pruddieverse."
-    # Social links (The glowing cards)
     links = [
       { github = "https://github.com/Cwendee" },
       { linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656" },
       { email = "mailto:pruddyanumudu@gmail.com" }
     ]
 
-  [params.homepage]
-    layout = "hero"
-    showRecent = true
-
   [params.header]
     layout = "classic"
 
   [params.footer]
     showCopyright = true
-    showPoweredBy = true
+    center = true
 
 [menu]
   [[menu.main]]
