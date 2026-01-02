@@ -8,7 +8,6 @@ copyright = "2025 Prudence Anumudu"
   colorScheme = "ocean"
   favicon = "favicon.png"
   customCss = ["css/custom.css"]
-
   [params.author]
     name = "Pruddie"
     image = "headshot.jpg"
