@@ -1,7 +1,4 @@
 ---
 title: "Pruddieverse"
 ---
-
-{{< button href="/projects/" target="_self" >}}
-🚀 Explore the Laboratory
-{{< /button >}}
+{{< button href="/projects/" >}}🚀 Explore the Laboratory{{< /button >}}

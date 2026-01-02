@@ -1,58 +1,43 @@
-/* 1. FORCE MIDNIGHT NAVY BACKGROUND */
-:root, html, body, .dark body {
+/* 1. FORCE THE BACKGROUND */
+html, body, .wrapper, main, .bg-secondary-bg {
     background-color: #14182d !important;
+    color: #9ca3af !important;
 }
 
-/* 2. HEADSHOT: Vertical Rectangle, No Hair Cut, Curved Edges */
-.prose img[src*="headshot"], .hero-area img, .author-image {
-    width: 200px !important;
-    height: 300px !important;
-    object-fit: cover !important;
-    border-radius: 20px !important;
-    border: 4px solid transparent !important;
-    transition: all 0.3s ease !important;
-}
-
-.prose img:active, .author-image:active {
-    border: 4px double #F7E7CE !important; /* Bold double edge on click */
-}
-
-/* 3. PROJECT CARDS: Separate with curved edges & Glow */
-article.relative {
-    margin-bottom: 2rem !important; /* Separates the cards */
-    border-radius: 15px !important;
-    background-color: #1e233c !important;
-    border: 1px solid #2d3748 !important;
-    padding: 15px !important;
-}
-
-article.relative:hover {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.7) !important; /* Light Blue Glow */
-}
-
-/* 4. CONTACT/SOCIAL ICONS */
-.flex.flex-wrap.justify-center a {
-    background-color: #1e233c !important;
-    padding: 10px !important;
-    border-radius: 10px !important;
-    margin: 10px !important;
-    border: 1px solid #2d3748 !important;
-}
-
-.flex.flex-wrap.justify-center a:hover {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8) !important;
-}
-
-/* 5. CHAMPAGNE GOLD TEXT & NO ITALICS */
+/* 2. FORCE GOLD TITLES */
 h1, .navbar-brand, .text-neutral-900 {
     color: #F7E7CE !important;
     font-style: normal !important;
 }
 
-* { font-style: normal !important; }
+/* 3. HEADSHOT: Vertical Rectangle, No Hair Cut */
+.hero-area img, .author-image, img[src*="headshot"] {
+    width: 200px !important;
+    height: 300px !important;
+    object-fit: contain !important; /* This stops the hair from being cut */
+    border-radius: 15px !important;
+    border: 2px solid #2d3748 !important;
+}
 
-/* 6. FOOTER CENTERING */
-footer .flex-col {
+/* 4. SEPARATE PROJECT CARDS */
+article {
+    margin-bottom: 3rem !important;
+    padding: 20px !important;
+    background-color: #1e233c !important;
+    border-radius: 12px !important;
+    border: 1px solid #2d3748 !important;
+}
+
+article:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6) !important;
+}
+
+/* 5. FOOTER CENTERING */
+footer .container {
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
+    justify-content: center !important;
     text-align: center !important;
+    width: 100% !important;
 }
