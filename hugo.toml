@@ -5,7 +5,6 @@ copyright = "2025 Prudence Anumudu"
 
 [params]
   colorScheme = "ocean"
-  # This line connects our new styling to your site
   customCSS = ["css/custom.css"]
   
   [params.author]
