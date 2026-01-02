@@ -1,58 +1,10 @@
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-  /* 1. REMOVE THE SKIP LINK FOREVER */
+  /* Nuclear kill for skip links on secondary pages */
   .skip-link, .screen-reader-text, [href="#content"], #content-skip { 
-      display: none !important; visibility: hidden !important; 
+      display: none !important; 
+      visibility: hidden !important; 
   }
-
-  /* 2. BASE THEME */
-  :root, html, body { background-color: #14182d !important; color: #9ca3af !important; margin: 0; }
-
-  /* 3. HEADER: LOGO LEFT, WORDS ONLY RIGHT */
-  header nav {
-      display: flex !important; justify-content: space-between !important;
-      padding: 30px 8% !important; align-items: center !important;
-  }
-  .navbar-brand, .logo { 
-      color: #F7E7CE !important; font-size: 2rem !important; text-decoration: none !important; 
-  }
-  /* Plain text links for menu - NO BOXES */
-  .menu-main, nav ul { display: flex !important; gap: 30px !important; list-style: none !important; }
-  nav a, .menu-main a { 
-      color: #9ca3af !important; text-decoration: none !important; background: none !important; border: none !important; padding: 0 !important;
-  }
-
-  /* 4. HERO SECTION: ADDING SPACE (NOT JAMPACKED) */
-  main, .hero-area { 
-      display: flex !important; flex-direction: column !important; align-items: center !important;
-      text-align: center !important; margin-top: 50px !important;
-  }
-  
-  /* Space out the Headshot and Bio */
-  img[src*="headshot"] { margin-bottom: 50px !important; border-radius: 15px; border: 3px solid #2d3748; }
-  .hero-text { margin-bottom: 40px !important; font-size: 1.2rem; }
-
-  /* 5. SKILL CARDS: HORIZONTAL SQUARES WITH ICONS */
-  .prose ul, ul:not(.menu-main) {
-      display: flex !important; flex-direction: row !important; flex-wrap: wrap !important;
-      justify-content: center !important; gap: 20px !important; list-style: none !important; padding: 0 !important;
-  }
-  .prose ul li, ul:not(.menu-main) li {
-      background: #1e233c !important; border: 1px solid #2d3748 !important; border-radius: 12px !important;
-      width: 130px !important; height: 130px !important; display: flex !important;
-      flex-direction: column !important; align-items: center !important; justify-content: center !important;
-      transition: all 0.3s ease !important;
-  }
-  .prose ul li:hover { transform: translateY(-10px); box-shadow: 0 0 20px #3b82f6; border-color: #3b82f6; color: #3b82f6; }
-
-  /* 6. CTA BUTTON: ADDING SPACE */
-  .cta-link, a[href*="projects"].btn {
-      margin-top: 60px !important; padding: 15px 30px !important; border: 1px solid #2d3748 !important;
-      background: #1e233c !important; color: #F7E7CE !important; text-decoration: none !important; border-radius: 8px !important;
-  }
-
-  /* 7. FOOTER SOCIALS */
-  .social-footer { display: flex !important; justify-content: center !important; gap: 40px !important; margin-top: 100px !important; font-size: 2rem !important; }
-  .social-footer a { color: #9ca3af !important; }
+  body { background-color: #14182d !important; color: #9ca3af !important; }
+  * { font-style: normal !important; }
 </style>
