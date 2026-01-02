@@ -1,0 +1,15 @@
+/* This targets the main content area of non-home pages */
+main, .main, #content, .container {
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+}
+
+/* This targets the gap specifically below the navigation */
+header + main, nav + main {
+    margin-top: 0 !important;
+}
+
+/* Reduce space specifically for the project titles */
+h1.post-title, h1.title {
+    margin-top: 5px !important;
+}
