@@ -1,44 +1,50 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
-  /* FORCE COLORS */
-  :root, html, body, .bg-body, .bg-secondary-bg, main {
-      background-color: #14182d !important;
-      color: #9ca3af !important;
+  /* FORCE BACKGROUND & TEXT */
+  :root, html, body { background-color: #14182d !important; color: #9ca3af !important; }
+  
+  /* CHAMPAGNE GOLD FOR TITLE */
+  .navbar-brand, h1, .text-neutral-900, a[href="/"] { color: #F7E7CE !important; font-style: normal !important; }
+
+  /* SKILLS/CARDS: Separate them and add the blue glow */
+  .prose ul li, .card, article {
+      display: inline-block !important;
+      margin: 10px !important;
+      padding: 10px 20px !important;
+      background-color: #1e233c !important;
+      border-radius: 12px !important;
+      border: 1px solid #2d3748 !important;
+      transition: all 0.3s ease !important;
   }
   
-  /* CHAMPAGNE GOLD TITLES */
-  h1, .navbar-brand, .text-neutral-900 {
-      color: #F7E7CE !important;
+  .prose ul li:hover, article:hover {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.7) !important;
+      transform: translateY(-3px);
   }
 
   /* HEADSHOT: Vertical Rectangle */
-  .hero-area img, .author-image, img[src*="headshot"] {
-      width: 220px !important;
-      height: 320px !important;
-      object-fit: contain !important;
-      border-radius: 15px !important;
+  img[src*="headshot"], .author-image {
+      width: 220px !important; height: 320px !important;
+      object-fit: contain !important; border-radius: 15px !important;
       border: 3px solid #2d3748 !important;
   }
 
-  /* FOOTER CENTERING */
-  footer .flex-col, footer .container {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
+  /* FOOTER: Centered at the bottom */
+  footer {
+      margin-top: 50px !important;
       text-align: center !important;
       width: 100% !important;
+      display: block !important;
   }
 
-  /* PROJECT CARDS: Separate & Glowing */
-  article {
-      margin-bottom: 2.5rem !important;
-      background-color: #1e233c !important;
-      border-radius: 15px !important;
-      padding: 20px !important;
-      border: 1px solid #2d3748 !important;
-  }
-  article:hover {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.7) !important;
+  /* CTA BUTTON */
+  .btn-primary, a[href*="projects"] {
+      background-color: #4b5563 !important;
+      color: #F7E7CE !important;
+      padding: 12px 24px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      display: inline-block !important;
   }
 
   * { font-style: normal !important; }
