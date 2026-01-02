@@ -1,11 +1,34 @@
-/* Midnight Navy and Gold Restoration */
 :root {
-  --color-primary-500: 218, 165, 32; /* Gold (Approximate) */
-  --color-neutral-900: 20, 24, 45;   /* Midnight Navy */
-  --color-neutral-800: 30, 35, 60;   /* Deep Navy */
+  --color-primary-500: 247, 231, 206; /* Champagne Gold */
+  --color-neutral-900: 20, 24, 45;   /* Midnight Navy Background */
+  --color-neutral-400: 156, 163, 175; /* Grey for text */
 }
 
-/* Force Navy Background */
-.dark body {
-  background-color: #14182d !important;
+/* Force Light Gold for Title and Titles */
+.dark .text-neutral-900, .dark .text-black, h1, .navbar-brand {
+  color: #F7E7CE !important;
+}
+
+/* Square Cards with Glow and Curved Edges */
+.card {
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+  background-color: #1e233c !important;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); /* Light Blue Glow */
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+/* CTA Button Styles */
+.btn-primary {
+  background-color: #4b5563 !important; /* Grey background */
+  color: #F7E7CE !important;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: #6b7280 !important;
 }

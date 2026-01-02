@@ -2,19 +2,22 @@ baseURL = "https://www.pruddieverse.com/"
 languageCode = "en-us"
 title = "Pruddieverse"
 theme = "github.com/jpanther/congo/v2"
+copyright = "2025 Prudence Anumudu"
 
 [params]
   colorScheme = "ocean"
-  # This fixes the Favicon and Headshot
   favicon = "favicon.ico"
   customCss = ["css/custom.css"]
 
   [params.author]
     name = "Pruddie"
-    # Ensure this file is inside your 'static/' folder
-    image = "headshot.jpg" 
+    image = "headshot.jpg"
     headline = "Cloud & DevOps Engineer"
-    bio = "Building the Pruddieverse."
+    links = [
+      { github = "https://github.com/Cwendee" },
+      { linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656" },
+      { email = "pruddyanumudu@gmail.com" }
+    ]
 
   [params.homepage]
     layout = "hero"
@@ -22,3 +25,7 @@ theme = "github.com/jpanther/congo/v2"
 
   [params.header]
     layout = "classic"
+
+  [params.footer]
+    showCopyright = true
+    showPoweredBy = false
