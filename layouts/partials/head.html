@@ -1,65 +1,61 @@
 <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-  /* 1. THE CORE PALETTE */
+  /* 2. APPLY INTER & MIDNIGHT NAVY */
   :root, html, body { 
-      background-color: #14182d !important; /* Midnight Navy */
-      color: #9ca3af !important; /* Grey Text */
+      background-color: #14182d !important; 
+      color: #9ca3af !important; /* THE GREY YOU REQUESTED */
+      font-family: 'Inter', sans-serif !important;
+      -webkit-font-smoothing: antialiased;
   }
 
-  /* 2. CHAMPAGNE GOLD: Pruddieverse Title & Headers */
-  h1, .navbar-brand, .logo, a[href="/"], .text-neutral-900 { 
+  /* 3. PRUDDIEVERSE TITLE: CHAMPAGNE GOLD */
+  .navbar-brand, .logo, a[href="/"], h1:first-of-type { 
       color: #F7E7CE !important; 
+      font-weight: 700 !important;
       font-style: normal !important;
       text-decoration: none !important;
   }
 
-  /* 3. PROJECT CARDS: Square, Separated, Midnight Blue background */
-  article, .project-card, [class*="card"] {
+  /* 4. HEADERS: LIGHT BLUE (Like before) */
+  h1, h2, h3, article h2, article h3 { 
+      color: #3b82f6 !important; 
+      font-weight: 600 !important;
+      font-style: normal !important;
+  }
+
+  /* 5. PROJECT CARDS: NEAT SQUARES */
+  article, [class*="card"] {
       display: block !important;
-      background-color: #1e233c !important; /* Slightly lighter navy for cards */
+      background-color: #1e233c !important;
       border: 1px solid #2d3748 !important;
-      border-radius: 8px !important; /* Square with slight curve */
+      border-radius: 8px !important;
       padding: 30px !important;
-      margin-bottom: 40px !important; /* Space between cards */
+      margin-bottom: 40px !important;
       transition: all 0.3s ease !important;
   }
 
-  /* 4. PROJECT TITLES & GLOW */
-  /* Title is Light Blue, whole card glows on hover */
-  article h2, article h3, .project-title {
-      color: #3b82f6 !important; /* Light Blue */
-      margin-bottom: 15px !important;
-  }
-
-  article:hover, .project-card:hover {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.8) !important; /* Blue Glow */
+  article:hover {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.8) !important;
       border-color: #3b82f6 !important;
-      transform: translateY(-5px);
   }
 
-  /* 5. SKILLS & BUTTONS (No Purple/Green allowed) */
-  ul li, .btn, a[href*="projects"] {
-      background-color: #1e233c !important;
-      color: #9ca3af !important;
-      border: 1px solid #2d3748 !important;
-      border-radius: 6px !important;
-      display: inline-block !important;
-      padding: 8px 16px !important;
-      margin: 5px !important;
-      text-decoration: none !important;
-  }
+  /* 6. GREY TEXT FOR ALL BODY CONTENT */
+  p, span, li, div { color: #9ca3af !important; }
 
-  /* Special Gold for CTA text */
-  a[href*="projects"] { color: #F7E7CE !important; }
-
-  /* 6. HEADSHOT (Keeping your perfect settings) */
+  /* 7. HEADSHOT (Keeping your perfect settings) */
   img[src*="headshot"], .author-image {
       width: 250px !important; height: 350px !important;
       object-fit: cover !important; object-position: top !important;
       border-radius: 15px !important; border: 3px solid #2d3748 !important;
+      margin: 0 auto !important; /* Centering the headshot */
+      display: block !important;
   }
 
-  /* 7. NO ITALICS & CENTER FOOTER */
+  /* 8. NO ITALICS & CENTERED FOOTER */
   * { font-style: normal !important; }
-  footer { text-align: center !important; margin-top: 50px !important; }
+  footer { text-align: center !important; margin-top: 60px !important; color: #9ca3af !important; }
 </style>
