@@ -1,6 +1,7 @@
 baseURL = "https://www.pruddieverse.com/"
 languageCode = "en-us"
 title = "Pruddieverse"
+theme = "congo"
 copyright = "2025 Prudence Anumudu"
 
 [params]
