@@ -1,0 +1,15 @@
+<style>
+  /* 1. REMOVE ITALICS SITE-WIDE */
+  body, p, span, em, i, .prose em, .italic, [class*="italic"] {
+    font-style: normal !important;
+  }
+
+  /* 2. REDUCE TOP SPACING (Excluding Home and Contact) */
+  body:not(.home):not(.contact) main {
+    margin-top: -1.5rem !important;
+  }
+
+  body:not(.home):not(.contact) .mt-12 {
+    margin-top: 1rem !important;
+  }
+</style>
