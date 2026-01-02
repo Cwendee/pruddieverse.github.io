@@ -1,0 +1,13 @@
+/* 1. REMOVE ALL ITALICS */
+em, i, .italic, [class*='italic'], .prose em, .text-neutral-500 {
+    font-style: normal !important;
+}
+
+/* 2. TIGHTEN TOP SPACING */
+.mt-12 {
+    margin-top: 1.5rem !important;
+}
+
+main article header {
+    padding-top: 1rem !important;
+}

@@ -1,26 +1,29 @@
 baseURL = "https://www.pruddieverse.com/"
 languageCode = "en-us"
 title = "Pruddieverse"
-copyright = "2025 Prudence Anumudu"
-
-# This points directly to the module source
 theme = "github.com/jpanther/congo/v2"
+copyright = "2025 Prudence Anumudu"
 
 [params]
   colorScheme = "ocean"
-  # Safe way to add our CSS fixes
+  # This makes the font straight and fixes spacing
   customCss = ["css/custom.css"]
   
-  [params.author]
-    name = "Pruddie"
-    image = "headshot.jpg" 
+  [params.header]
+    layout = "basic"
+
+  [params.footer]
+    showCopyright = true
 
   [params.homepage]
     layout = "hero"
+    showRecent = true
 
-  [params.hero]
-    title = "Building the Pruddieverse."
-    subtitle = "Cloud & DevOps Engineer | Automating Infrastructure."
+  [params.author]
+    name = "Pruddie"
+    image = "headshot.jpg"
+    headline = "Cloud & DevOps Engineer | Automating Infrastructure."
+    bio = "Building the Pruddieverse."
 
 [menu]
   [[menu.main]]
