@@ -1,21 +1,20 @@
-/* Target the main content area only on internal pages.
-   We exclude the home page and specific contact layouts.
-*/
+/* 1. REMOVE ITALICS FROM SUMMARIES */
+.project-summary, .post-summary, .summary, em, i {
+    font-style: normal !important;
+}
 
+/* 2. REDUCE TOP SPACING (Excluding Home and Contact) */
+/* We target common Hugo theme classes for main content */
 body:not(.home):not(.contact) main, 
-body:not(.home):not(.contact) .container,
-body:not(.home):not(.contact) .single-container {
-    padding-top: 5px !important;
-    margin-top: 5px !important;
+body:not(.home):not(.contact) #content,
+body:not(.home):not(.contact) .container {
+    padding-top: 0 !important;
+    margin-top: 10px !important;
 }
 
-/* Reduce the margin specifically for the first heading on these pages */
-body:not(.home):not(.contact) h1 {
+/* 3. TARGET THE TITLE SPECIFICALLY */
+body:not(.home):not(.contact) h1.title,
+body:not(.home):not(.contact) h1.post-title {
     margin-top: 0 !important;
-    padding-top: 10px !important;
-}
-
-/* Adjust the gap between the navigation menu and the content */
-body:not(.home):not(.contact) .header-gap {
-    height: 10px !important;
+    padding-top: 0 !important;
 }

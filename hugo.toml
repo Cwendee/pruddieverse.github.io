@@ -5,7 +5,9 @@ copyright = "2025 Prudence Anumudu"
 
 [params]
   colorScheme = "ocean"
+  # Loading our fix
   customCSS = ["css/custom.css"]
+  custom_css = ["css/custom.css"]
   
   [params.author]
     name = "Pruddie"
