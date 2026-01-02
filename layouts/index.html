@@ -1,69 +1,93 @@
-{{ define "main" }}
-<div class="flex flex-col items-center justify-center min-h-[75vh] text-center px-4">
-  
-  <div class="mb-10 p-3 bg-slate-800/40 backdrop-blur-sm rounded-[2rem] border border-white/10 shadow-2xl inline-block">
-    <img src="/headshot.jpg" alt="Pruddie" class="w-40 h-52 md:w-56 md:h-72 rounded-[1.5rem] object-cover shadow-inner">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruddieverse</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* RESET - KILL THE SKIP LINK AND THEME JUNK */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
+        body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
 
-  <h1 class="text-4xl md:text-7xl font-bold tracking-tighter mb-6 whitespace-nowrap leading-[0.85]">
-    Building the Pruddieverse
-  </h1>
-  
-  <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-4 font-normal leading-relaxed">
-    I don’t just solve technical problems; I bridge the gap between human needs and automated solutions.
-  </p>
+        /* HEADER: LOGO LEFT, WORDS RIGHT */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; }
+        .logo { color: #F7E7CE; font-family: 'Playfair Display', serif; font-size: 2rem; text-decoration: none; }
+        nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #F7E7CE; }
 
-  <div class="py-16 w-full max-w-5xl mx-auto">
-    <div class="flex flex-wrap justify-center gap-4">
-      
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fab fa-aws text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">AWS</span>
-      </div>
+        /* HERO AREA: CENTERED & SPACED */
+        .container { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 60px 20px; }
+        
+        /* HEADSHOT: CONTROLLED SIZE */
+        .headshot { width: 220px; height: 320px; object-fit: cover; border-radius: 15px; border: 3px solid #2d3748; margin-bottom: 40px; }
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fab fa-docker text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">Docker</span>
-      </div>
+        /* BIO */
+        h1 { color: #9ca3af; font-weight: 400; margin-bottom: 10px; }
+        .bio { max-width: 600px; margin-bottom: 50px; }
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fas fa-dharmachakra text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">Kubernetes</span>
-      </div>
+        /* SKILL CARDS: HORIZONTAL SQUARES */
+        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; margin-bottom: 60px; }
+        .skill-card { 
+            background: #1e233c; border: 1px solid #2d3748; border-radius: 12px;
+            width: 120px; height: 120px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; transition: 0.3s;
+        }
+        .skill-card i { font-size: 2rem; margin-bottom: 10px; }
+        .skill-card:hover { transform: translateY(-10px); box-shadow: 0 0 20px #3b82f6; border-color: #3b82f6; color: #3b82f6; }
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fas fa-code text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">Terraform</span>
-      </div>
+        /* CTA BUTTON: ROCKET EMOJI */
+        .cta { 
+            display: inline-flex; align-items: center; background: #1e233c; color: #F7E7CE; 
+            padding: 15px 30px; border-radius: 10px; text-decoration: none; border: 1px solid #2d3748; 
+            margin-bottom: 80px; transition: 0.3s;
+        }
+        .cta:hover { background: #2d3748; }
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fas fa-project-diagram text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">Ansible</span>
-      </div>
+        /* FOOTER SOCIALS */
+        footer { margin-top: 50px; padding-bottom: 50px; }
+        .socials { display: flex; justify-content: center; gap: 40px; font-size: 2rem; }
+        .socials a { color: #9ca3af; transition: 0.3s; }
+        .socials a:hover { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Pruddieverse</a>
+        <nav>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fab fa-jenkins text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">Jenkins</span>
-      </div>
+    <div class="container">
+        <img src="/headshot.jpg" alt="Pruddie" class="headshot">
+        <h1>Building the Pruddieverse</h1>
+        <p class="bio">I don’t just solve technical problems; I bridge the gap between human needs and automated solutions.</p>
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fab fa-github text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">GitHub</span>
-      </div>
+        <ul class="skills">
+            <li class="skill-card"><i class="fab fa-aws"></i>AWS</li>
+            <li class="skill-card"><i class="fab fa-docker"></i>Docker</li>
+            <li class="skill-card"><i class="fab fa-fort-awesome"></i>K8s</li>
+            <li class="skill-card"><i class="fas fa-code"></i>Terraform</li>
+            <li class="skill-card"><i class="fas fa-server"></i>Ansible</li>
+            <li class="skill-card"><i class="fab fa-jenkins"></i>Jenkins</li>
+            <li class="skill-card"><i class="fab fa-github"></i>GitHub</li>
+            <li class="skill-card"><i class="fas fa-terminal"></i>Bash</li>
+        </ul>
 
-      <div class="group relative p-4 bg-slate-800/20 border border-white/5 rounded-xl transition-all duration-300 hover:border-accent/50 hover:bg-slate-800/40 opacity-40 hover:opacity-100">
-        <i class="fas fa-terminal text-2xl mb-1 block"></i>
-        <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-500 group-hover:text-accent">Bash/Shell</span>
-      </div>
+        <a href="/projects" class="cta">🚀 Explore the Laboratory</a>
 
+        <footer>
+            <div class="socials">
+                <a href="https://github.com/Cwendee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:pruddyanumudu@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </footer>
     </div>
-  </div>
-
-  <div class="flex justify-center">
-    <a href="/projects/" class="group flex items-center gap-4 text-xs uppercase tracking-[0.3em] font-bold text-accent hover:text-white transition-all">
-      Explore the Laboratory 
-      <span class="group-hover:translate-x-3 transition-transform">———&rarr;</span>
-    </a>
-  </div>
-</div>
-{{ end }}
+</body>
+</html>
