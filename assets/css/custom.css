@@ -1,14 +1,13 @@
-/* Force non-italics on project summaries and prose */
-.prose summary, .prose em, .prose i, article p {
+/* 1. FORCE NO ITALICS */
+em, i, .prose em, .italic, [class*="italic"], .text-neutral-500 {
     font-style: normal !important;
 }
 
-/* Tighten the gap on internal pages (excluding Home/Contact) */
-body:not(.home):not(.contact) main article {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+/* 2. REDUCE TOP SPACING */
+body:not(.home):not(.contact) main {
+    margin-top: -1.5rem !important;
 }
 
 body:not(.home):not(.contact) .mt-12 {
-    margin-top: 1.5rem !important;
+    margin-top: 1rem !important;
 }
