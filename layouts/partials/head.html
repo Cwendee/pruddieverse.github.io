@@ -4,58 +4,93 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* 2. APPLY INTER & MIDNIGHT NAVY */
+  /* 1. GLOBAL RESET & INTER FONT */
   :root, html, body { 
       background-color: #14182d !important; 
-      color: #9ca3af !important; /* THE GREY YOU REQUESTED */
+      color: #9ca3af !important; /* GREY TEXT */
       font-family: 'Inter', sans-serif !important;
-      -webkit-font-smoothing: antialiased;
+      text-align: center !important; /* FORCES EVERYTHING TO MIDDLE */
   }
 
-  /* 3. PRUDDIEVERSE TITLE: CHAMPAGNE GOLD */
-  .navbar-brand, .logo, a[href="/"], h1:first-of-type { 
+  /* 2. PRUDDIEVERSE LOGO/BUTTON: CHAMPAGNE GOLD */
+  .navbar-brand, .logo, a[href="/"], .brand-text { 
       color: #F7E7CE !important; 
       font-weight: 700 !important;
-      font-style: normal !important;
+      font-size: 1.5rem !important;
       text-decoration: none !important;
   }
 
-  /* 4. HEADERS: LIGHT BLUE (Like before) */
-  h1, h2, h3, article h2, article h3 { 
-      color: #3b82f6 !important; 
-      font-weight: 600 !important;
-      font-style: normal !important;
+  /* 3. HERO STATEMENT & BIO: GREY & CENTERED */
+  h1, .hero-text, .bio-text, p {
+      color: #9ca3af !important; 
+      max-width: 800px;
+      margin: 20px auto !important;
+      display: block !important;
   }
 
-  /* 5. PROJECT CARDS: NEAT SQUARES */
-  article, [class*="card"] {
-      display: block !important;
-      background-color: #1e233c !important;
+  /* 4. SKILL CARDS: CENTERED ICONS/TEXT */
+  ul { 
+      list-style: none !important; 
+      padding: 0 !important; 
+      display: flex !important; 
+      flex-wrap: wrap !important; 
+      justify-content: center !important; /* CENTERS THE CARDS */
+      gap: 15px !important;
+      margin: 30px auto !important;
+      max-width: 900px !important;
+  }
+
+  li {
+      background-color: #1e233c !important; /* Card Background */
+      color: #9ca3af !important; /* Grey Text */
       border: 1px solid #2d3748 !important;
       border-radius: 8px !important;
-      padding: 30px !important;
-      margin-bottom: 40px !important;
+      padding: 12px 20px !important;
       transition: all 0.3s ease !important;
+      cursor: pointer;
+  }
+
+  /* LIGHT BLUE GLOW ON HOVER/CLICK */
+  li:hover, li:active {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.8) !important;
+      border-color: #3b82f6 !important;
+      color: #3b82f6 !important; /* Text turns blue on glow */
+  }
+
+  /* 5. PROJECT CARDS: SQUARE & SEPARATED */
+  article {
+      background-color: #1e233c !important;
+      border-radius: 12px !important;
+      padding: 30px !important;
+      margin: 40px auto !important;
+      max-width: 800px !important;
+      border: 1px solid #2d3748 !important;
+      text-align: left !important; /* Text inside card stays left */
   }
 
   article:hover {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.8) !important;
-      border-color: #3b82f6 !important;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.7) !important;
   }
 
-  /* 6. GREY TEXT FOR ALL BODY CONTENT */
-  p, span, li, div { color: #9ca3af !important; }
-
-  /* 7. HEADSHOT (Keeping your perfect settings) */
+  /* 6. HEADSHOT: PERFECTLY CENTERED */
   img[src*="headshot"], .author-image {
       width: 250px !important; height: 350px !important;
-      object-fit: cover !important; object-position: top !important;
-      border-radius: 15px !important; border: 3px solid #2d3748 !important;
-      margin: 0 auto !important; /* Centering the headshot */
+      object-fit: cover !important; 
+      object-position: top !important;
+      border-radius: 15px !important; 
+      border: 3px solid #2d3748 !important;
+      margin: 40px auto !important;
       display: block !important;
   }
 
-  /* 8. NO ITALICS & CENTERED FOOTER */
+  /* 7. NO ITALICS */
   * { font-style: normal !important; }
-  footer { text-align: center !important; margin-top: 60px !important; color: #9ca3af !important; }
+
+  /* 8. NAVIGATION ALIGNMENT */
+  header nav {
+      display: flex !important;
+      justify-content: center !important;
+      gap: 30px !important;
+      padding: 20px 0 !important;
+  }
 </style>
