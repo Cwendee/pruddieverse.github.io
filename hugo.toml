@@ -14,7 +14,7 @@ copyright = "2025 Prudence Anumudu"
     image = "headshot.jpg"
     headline = "Cloud & DevOps Engineer"
     bio = "Building the Pruddieverse."
-    # These create the "Contact Cards" that glow
+    # These create the icons/cards
     links = [
       { github = "https://github.com/Cwendee" },
       { linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656" },
@@ -31,13 +31,5 @@ copyright = "2025 Prudence Anumudu"
 
   [params.footer]
     showCopyright = true
-
-[menu]
-  [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 10
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 20
+    showPoweredBy = true
+    center = true # Centers the copyright and "Powered by"
