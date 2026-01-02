@@ -13,19 +13,31 @@ copyright = "2025 Prudence Anumudu"
     name = "Pruddie"
     image = "headshot.jpg"
     headline = "Cloud & DevOps Engineer"
+    bio = "Building the Pruddieverse."
+    # These create the "Contact Cards" that glow
     links = [
       { github = "https://github.com/Cwendee" },
       { linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656" },
-      { email = "pruddyanumudu@gmail.com" }
+      { email = "mailto:pruddyanumudu@gmail.com" }
     ]
 
   [params.homepage]
     layout = "hero"
     showRecent = true
+    recentItemsToShow = 3
 
   [params.header]
     layout = "classic"
 
   [params.footer]
     showCopyright = true
-    showPoweredBy = false
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20

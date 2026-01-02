@@ -1,13 +1,38 @@
-/* 1. REMOVE ALL ITALICS */
-em, i, .italic, [class*='italic'], .prose em, .text-neutral-500 {
+/* 1. BACKGROUND & TEXT COLORS */
+html, body {
+    background-color: #14182d !important; /* Midnight Navy */
+    color: #9ca3af !important; /* Grey Text */
+}
+
+/* 2. CHAMPAGNE GOLD TITLE */
+.navbar-brand, h1, .text-neutral-900 {
+    color: #F7E7CE !important;
+}
+
+/* 3. NO ITALICS ANYWHERE */
+* {
     font-style: normal !important;
 }
 
-/* 2. TIGHTEN TOP SPACING */
-.mt-12 {
-    margin-top: 1.5rem !important;
+/* 4. SQUARE CARDS WITH BLUE GLOW (Projects & Contacts) */
+article, .flex.flex-wrap.justify-center a {
+    border-radius: 8px !important;
+    background-color: #1e233c !important;
+    border: 1px solid #2d3748 !important;
+    transition: all 0.3s ease !important;
+    margin: 5px;
 }
 
-main article header {
-    padding-top: 1rem !important;
+/* BLUE GLOW ON HOVER */
+article:hover, .flex.flex-wrap.justify-center a:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8) !important;
+    border-color: #3b82f6 !important;
+    transform: translateY(-3px);
+}
+
+/* 5. CTA BUTTON (GREY WITH HOVER) */
+.btn-primary {
+    background-color: #4b5563 !important;
+    color: #F7E7CE !important;
+    border: none !important;
 }
