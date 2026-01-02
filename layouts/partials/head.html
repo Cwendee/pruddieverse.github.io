@@ -1,90 +1,111 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-  /* 1. HIDE THE "SKIP TO MAIN CONTENT" LINK */
-  .screen-reader-text, .skip-link, [href="#content"] {
-      display: none !important;
-      visibility: hidden !important;
-  }
+  /* 1. HIDE THE JUNK */
+  .skip-link, [href="#content"], .screen-reader-text { display: none !important; }
 
-  /* 2. GLOBAL RESET & INTER FONT */
+  /* 2. BASE COLORS */
   :root, html, body { 
       background-color: #14182d !important; 
-      color: #9ca3af !important; /* GREY TEXT */
-      font-family: 'Inter', sans-serif !important;
-      text-align: center !important;
-  }
-
-  /* 3. PRUDDIEVERSE LOGO: CHAMPAGNE GOLD */
-  .navbar-brand, .logo, a[href="/"], .brand-text { 
-      color: #F7E7CE !important; 
-      font-weight: 700 !important;
-      font-size: 1.5rem !important;
-      text-decoration: none !important;
-      font-style: normal !important;
-  }
-
-  /* 4. HERO & BIO: CENTERED GREY */
-  h1, .hero-text, .bio-text, p {
       color: #9ca3af !important; 
-      max-width: 800px;
-      margin: 20px auto !important;
-      display: block !important;
-      font-style: normal !important;
+      font-family: 'Inter', sans-serif !important;
+      margin: 0; padding: 0;
   }
 
-  /* 5. SKILL CARDS: GREY WITH BLUE GLOW */
+  /* 3. TOP NAVIGATION: LOGO LEFT, MENU RIGHT */
+  header nav {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 30px 8% !important;
+      width: 100% !important;
+      box-sizing: border-box;
+  }
+
+  .navbar-brand, .logo, a[href="/"] { 
+      color: #F7E7CE !important; 
+      font-family: 'Playfair Display', serif !important;
+      font-size: 1.8rem !important;
+      text-decoration: none !important;
+  }
+
+  .menu-main, .flex.items-center.text-base {
+      display: flex !important;
+      gap: 25px !important;
+      list-style: none !important;
+  }
+
+  .menu-main a, nav a {
+      color: #9ca3af !important; /* GREY MENU LINKS */
+      text-decoration: none !important;
+      font-weight: 500 !important;
+  }
+
+  /* 4. MAIN LAYOUT: CENTERED & SPACED */
+  main, .hero-area {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding-top: 50px !important;
+  }
+
+  /* 5. HEADSHOT: PERFECT RECTANGLE */
+  img[src*="headshot"], .author-image {
+      width: 250px !important; height: 350px !important;
+      object-fit: cover !important; object-position: top !important;
+      border-radius: 15px !important; border: 3px solid #2d3748 !important;
+      margin-bottom: 30px !important;
+  }
+
+  /* 6. SKILL CARDS: HORIZONTAL & GLOWING */
   ul { 
-      list-style: none !important; 
-      padding: 0 !important; 
-      display: flex !important; 
-      flex-wrap: wrap !important; 
-      justify-content: center !important; 
-      gap: 15px !important;
-      margin: 30px auto !important;
+      list-style: none !important; padding: 0 !important; 
+      display: flex !important; flex-wrap: wrap !important; 
+      justify-content: center !important; gap: 20px !important;
+      margin: 40px auto !important; max-width: 900px !important;
   }
 
   li {
-      background-color: #1e233c !important; 
+      background-color: #1e233c !important;
       color: #9ca3af !important; 
       border: 1px solid #2d3748 !important;
-      border-radius: 8px !important;
-      padding: 12px 20px !important;
+      border-radius: 10px !important;
+      padding: 15px 25px !important;
       transition: all 0.3s ease !important;
-      font-style: normal !important;
   }
 
   li:hover {
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.8) !important;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.7) !important;
       border-color: #3b82f6 !important;
       color: #3b82f6 !important;
   }
 
-  /* 6. HEADSHOT: PERFECTLY CENTERED */
-  img[src*="headshot"], .author-image {
-      width: 250px !important; height: 350px !important;
-      object-fit: cover !important; 
-      object-position: top !important;
-      border-radius: 15px !important; 
-      border: 3px solid #2d3748 !important;
-      margin: 40px auto !important;
-      display: block !important;
-  }
-
-  /* 7. PROJECT CARDS: SEPARATED SQUARES */
+  /* 7. PROJECT CARDS: SPACED SQUARES */
   article {
       background-color: #1e233c !important;
       border-radius: 12px !important;
-      padding: 30px !important;
-      margin: 40px auto !important;
-      max-width: 800px !important;
+      padding: 40px !important;
+      margin-bottom: 60px !important; /* HUGE SPACE BETWEEN PROJECTS */
+      width: 90% !important;
+      max-width: 750px !important;
       border: 1px solid #2d3748 !important;
       text-align: left !important;
   }
 
-  /* 8. REMOVE ALL ITALICS */
+  /* 8. FOOTER: CENTERED WITH BREATHING ROOM */
+  footer { 
+      margin-top: 100px !important; 
+      padding-bottom: 40px !important;
+      text-align: center !important;
+      border-top: 1px solid #2d3748 !important;
+      padding-top: 30px !important;
+  }
+
+  /* 9. NO ITALICS */
   * { font-style: normal !important; }
 </style>

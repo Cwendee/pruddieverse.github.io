@@ -13,17 +13,11 @@ copyright = "2025 Prudence Anumudu"
     name = "Pruddie"
     image = "headshot.jpg"
     headline = "Cloud & DevOps Engineer"
-    bio = "Building the Pruddieverse."
     links = [
       { github = "https://github.com/Cwendee" },
       { linkedin = "https://www.linkedin.com/in/prudence-c-anumudu-35518656" },
       { email = "mailto:pruddyanumudu@gmail.com" }
     ]
-
-  [params.footer]
-    showCopyright = true
-    showPoweredBy = true
-    center = true 
 
 [menu]
   [[menu.main]]
@@ -34,3 +28,7 @@ copyright = "2025 Prudence Anumudu"
     name = "About"
     url = "/about/"
     weight = 20
+  [[menu.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 30
