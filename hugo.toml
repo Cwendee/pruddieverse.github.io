@@ -6,17 +6,14 @@ copyright = "2025 Prudence Anumudu"
 
 [params]
   colorScheme = "ocean"
-  # This makes the font straight and fixes spacing
+  # This links the CSS file that fixes the italics
   customCss = ["css/custom.css"]
-  
-  [params.header]
-    layout = "basic"
 
-  [params.footer]
-    showCopyright = true
+  [params.header]
+    layout = "classic" # This puts the logo/name on the left and menu on the right
 
   [params.homepage]
-    layout = "hero"
+    layout = "hero" # This restores the centered profile look
     showRecent = true
 
   [params.author]
