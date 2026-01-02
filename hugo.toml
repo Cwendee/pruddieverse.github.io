@@ -1,11 +1,15 @@
 baseURL = "https://www.pruddieverse.com/"
 languageCode = "en-us"
 title = "Pruddieverse"
-theme = "congo"
 copyright = "2025 Prudence Anumudu"
+
+# This points directly to the module source
+theme = "github.com/jpanther/congo/v2"
 
 [params]
   colorScheme = "ocean"
+  # Safe way to add our CSS fixes
+  customCss = ["css/custom.css"]
   
   [params.author]
     name = "Pruddie"
