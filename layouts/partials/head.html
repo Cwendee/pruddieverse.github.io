@@ -5,69 +5,69 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-  /* 1. HIDE ACCESSIBILITY TEXT */
-  .skip-link, .screen-reader-text, #content-skip { display: none !important; }
+  /* 1. COMPLETELY WIPE THE "SKIP TO CONTENT" AND THEME JUNK */
+  .skip-link, .screen-reader-text, #content-skip, [href="#content"] { 
+      display: none !important; 
+      visibility: hidden !important; 
+      height: 0 !important;
+  }
 
-  /* 2. COLORS & FONT */
+  /* 2. FORCE MIDNIGHT NAVY & INTER FONT */
   :root, html, body { 
       background-color: #14182d !important; 
       color: #9ca3af !important; 
       font-family: 'Inter', sans-serif !important;
-      margin: 0; padding: 0;
+      margin: 0 !important; padding: 0 !important;
   }
 
-  /* 3. HEADER: LOGO LEFT, MENU RIGHT */
+  /* 3. HEADER: LOGO LEFT (GOLD), MENU RIGHT (GREY) */
   header nav {
       display: flex !important;
-      flex-direction: row !important;
       justify-content: space-between !important;
       align-items: center !important;
-      padding: 20px 8% !important;
-      width: 100% !important;
+      padding: 30px 10% !important;
+      max-width: 100% !important;
   }
 
   .navbar-brand, .logo, a[href="/"] { 
       color: #F7E7CE !important; /* CHAMPAGNE GOLD */
       font-family: 'Playfair Display', serif !important;
-      font-size: 1.8rem !important;
+      font-size: 2rem !important;
       text-decoration: none !important;
   }
 
-  /* REMOVE BOXES FROM MENU LINKS */
-  nav ul, .menu-main {
+  /* Horizontal Menu Links */
+  .menu-main, nav ul {
       display: flex !important;
+      flex-direction: row !important;
       gap: 30px !important;
       list-style: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
   }
 
   nav a, .menu-main a {
-      color: #9ca3af !important; /* GREY MENU */
+      color: #9ca3af !important; /* GREY */
       text-decoration: none !important;
-      font-weight: 500 !important;
       background: none !important;
       border: none !important;
   }
 
-  /* 4. CENTERED CONTENT */
+  /* 4. CENTERED HERO & HEADSHOT */
   main, .hero-area {
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
       text-align: center !important;
-      padding-top: 40px !important;
   }
 
   img[src*="headshot"] {
       width: 250px !important; height: 350px !important;
       object-fit: cover !important; border-radius: 15px !important;
       border: 3px solid #2d3748 !important;
-      margin-bottom: 25px !important;
+      margin: 40px 0 !important;
   }
 
-  /* 5. SKILL CARDS: HORIZONTAL, SQUARE, GLOWING */
-  /* This targets the list you just showed me */
+  /* 5. SKILLS: HORIZONTAL ANIMATED CARDS (SQUARES) */
+  /* This targets any list in the content to force them into cards */
   .prose ul, ul:not(.menu-main) {
       display: flex !important;
       flex-direction: row !important;
@@ -75,70 +75,77 @@
       justify-content: center !important;
       gap: 20px !important;
       padding: 0 !important;
-      margin: 40px auto !important;
       list-style: none !important;
+      margin: 50px auto !important;
   }
 
   .prose ul li, ul:not(.menu-main) li {
       background-color: #1e233c !important;
       border: 1px solid #2d3748 !important;
       border-radius: 12px !important;
-      width: 110px !important;
-      height: 110px !important;
+      width: 140px !important; /* Square */
+      height: 140px !important;
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
-      transition: all 0.3s ease !important;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      color: #9ca3af !important;
       margin: 0 !important;
   }
 
+  /* ANIMATION & BLUE GLOW */
   .prose ul li:hover {
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.8) !important;
+      transform: translateY(-10px) scale(1.05) !important;
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.8) !important;
       border-color: #3b82f6 !important;
       color: #3b82f6 !important;
   }
 
-  /* 6. EXPLORE BUTTON WITH ROCKET */
-  a[href*="projects"].btn, .cta {
+  /* 6. CTA BUTTON WITH ROCKET */
+  a[href*="projects"].btn {
       display: inline-flex !important;
       align-items: center !important;
       background-color: #1e233c !important;
-      color: #F7E7CE !important; /* GOLD TEXT */
-      padding: 14px 28px !important;
-      border-radius: 8px !important;
-      text-decoration: none !important;
-      margin-top: 30px !important;
+      color: #F7E7CE !important;
+      padding: 16px 32px !important;
+      border-radius: 10px !important;
+      margin: 40px 0 !important;
       border: 1px solid #2d3748 !important;
+      text-decoration: none !important;
   }
   a[href*="projects"].btn::before { content: "🚀 "; margin-right: 10px; }
 
-  /* 7. FOOTER ICONS */
-  .social-icons {
-      display: flex !important;
-      justify-content: center !important;
-      gap: 35px !important;
-      margin-top: 60px !important;
-      font-size: 1.8rem !important;
+  /* 7. PROJECT CARDS (For the Projects Page) */
+  article {
+      background-color: #1e233c !important;
+      border-radius: 15px !important;
+      padding: 40px !important;
+      margin-bottom: 60px !important;
+      border: 1px solid #2d3748 !important;
+      text-align: left !important;
   }
 
-  .social-icons a { color: #9ca3af !important; text-decoration: none !important; }
-  .social-icons a:hover { color: #3b82f6 !important; }
-
+  /* 8. NO ITALICS */
   * { font-style: normal !important; }
 </style>
 
 <script>
   window.onload = function() {
-    // Add Social Icons to Footer
+    // Force the removal of the Skip Link if CSS fails
+    const skip = document.querySelector('.skip-link');
+    if (skip) skip.remove();
+
+    // Ensure Social Icons are in the footer
     const footer = document.querySelector('footer');
-    if (footer && !document.querySelector('.social-icons')) {
+    if (footer && !document.querySelector('.social-icons-box')) {
       const iconBox = document.createElement('div');
-      iconBox.className = 'social-icons';
+      iconBox.style.cssText = "display:flex; gap:40px; justify-content:center; font-size:2rem; margin: 40px 0;";
+      iconBox.className = 'social-icons-box';
       iconBox.innerHTML = `
-        <a href="https://github.com/Cwendee" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:pruddyanumudu@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Cwendee" style="color:#9ca3af" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" style="color:#9ca3af" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:pruddyanumudu@gmail.com" style="color:#9ca3af"><i class="fas fa-envelope"></i></a>
       `;
       footer.prepend(iconBox);
     }
