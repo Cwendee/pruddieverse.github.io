@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Pruddieverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
+        .skip-link, .screen-reader-text { display: none !important; }
+        body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; }
+        .container { display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+        h1 { color: #9ca3af; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.2rem; margin-bottom: 50px; }
+        
+        /* PROJECT CARDS */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; width: 80%; max-width: 1000px; list-style: none; }
+        .project-card { 
+            background: #1e233c; border: 1px solid #2d3748; border-radius: 15px; padding: 30px; 
+            transition: 0.3s; text-decoration: none; color: #9ca3af; display: flex; flex-direction: column;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+        .project-card h2 { color: #E6BE8A; margin-bottom: 15px; font-size: 1.4rem; }
+        .project-card p { margin-bottom: 20px; font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+        .case-study-link { color: #3b82f6; font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+<body>
+    {{ partial "header.html" . }}
+    <div class="container">
+        <h1>The Laboratory</h1>
+        <div class="project-grid">
+            {{ range .Pages }}
+            <a href="{{ .Permalink }}" class="project-card">
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Summary }}</p>
+                <span class="case-study-link">Open Case Study ———→</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+</html>
