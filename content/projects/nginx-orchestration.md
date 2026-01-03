@@ -32,4 +32,4 @@ Ansible · AWS EC2 · Nginx · Git · Linux
 * Practical automation techniques for high-availability architectures
 * Infrastructure security best practices, including the protection of sensitive system details
 
-<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" target="_blank" style="display: inline-block; margin: 30px 0; padding: 12px 25px; background: #1e233c; border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; color: #E6BE8A !important; font-weight: 700;">➡️ View full project</a>
+[➡️ View full project](https://github.com/Cwendee/multi-az-nginx-orchestration)

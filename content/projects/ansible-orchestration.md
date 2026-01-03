@@ -12,7 +12,7 @@ Automated the provisioning and configuration of a multi-node web infrastructure 
 
 **🎯 Problem & Objective**
 
-Single-zone deployments introduce availability risks and manual configurations do not scale. This project demonstrates how automation and orchestration can deliver high availability, consistency, and reliability across distributed cloud infrastructure.
+Manual server configuration does not scale and often leads to inconsistencies. This project demonstrates how configuration management can enforce consistency, idempotency, and scalability across multiple cloud servers.
 
 **🧠 What I Built**
 * Designed a 1-to-2 orchestration architecture where a single Ansible control node manages multiple EC2 instances
@@ -33,4 +33,4 @@ Ansible · AWS EC2 · Apache (httpd) · Git · Linux
 * Practical use of regex in configuration automation
 * Applying security best practices by protecting sensitive infrastructure details
 
-<a href="https://github.com/Cwendee/ansible-web-orchestration-lab" target="_blank" style="display: inline-block; margin: 30px 0; padding: 12px 25px; background: #1e233c; border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; color: #E6BE8A !important; font-weight: 700;">➡️ View full project</a>
+[➡️ View full project](https://github.com/Cwendee/ansible-web-orchestration-lab)
