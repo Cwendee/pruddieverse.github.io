@@ -14,24 +14,48 @@
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: left; }
         
-        /* Main Project Title (Blue) */
-        .container p strong:first-child { color: #5a8ccf; font-size: 1.4rem; display: block; margin-bottom: 25px; }
-        
-        /* Sub-headings (Grey & Bold) */
-        /* This targets all bold text except the first blue title */
-        .container p strong { color: #9ca3af; font-weight: 700; font-size: 1.1rem; display: inline-block; margin-top: 15px; width: 100%; }
-        
-        /* Ensure bullets and text are properly spaced */
-        .container ul { margin-top: 5px; }
+        /* --- PROJECT PAGE RULES --- */
+        /* Main Title: Large & Blue */
+        .container p:first-of-type strong:first-child { 
+            color: #5a8ccf !important; 
+            font-size: 1.4rem !important; 
+            display: block; 
+            margin-bottom: 25px;
+        }
+        /* Sub-headings: Grey, Bold, Own Line */
+        .container p strong:not(:first-child) { 
+            color: #9ca3af !important; 
+            font-size: 1.05rem !important; 
+            font-weight: 700;
+            display: block; 
+            margin-top: 25px; 
+            margin-bottom: 5px;
+        }
 
-        /* GitHub Button */
+        /* --- CONTACT PAGE RULES (LOCKED) --- */
+        .contact-grid { 
+            display: flex !important; 
+            flex-direction: row !important; 
+            justify-content: center !important; 
+            gap: 20px !important; 
+            margin: 50px auto !important;
+            flex-wrap: nowrap; 
+        }
+        .contact-card { 
+            background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; 
+            width: 150px !important; height: 120px !important; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-decoration: none; color: #9ca3af; transition: 0.3s; 
+        }
+        .contact-card i { font-size: 2rem; margin-bottom: 10px; }
+        .contact-card span { font-weight: 700; font-size: 0.85rem; }
+
+        /* --- BUTTONS & FOOTER --- */
         .container a[href^="https://github.com/"] {
             display: inline-block; margin: 30px 0; padding: 12px 25px; background: #1e233c; 
             border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; 
             color: #E6BE8A !important; font-weight: 700; transition: 0.3s;
         }
-        .container a[href^="https://github.com/"]:hover { border-color: #3b82f6; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
-
         footer { margin-top: 60px; padding: 40px; border-top: 1px solid #2d3748; text-align: center; }
     </style>
 </head>
