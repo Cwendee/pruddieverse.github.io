@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | Pruddieverse</title>
-    
     <link rel="icon" type="image/png" href="https://www.pruddieverse.com/favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* KILL ANCHOR SYMBOLS */
         .anchor, .heading-link, h1 a, h2 a, h3 a, h4 a, .header-link { display: none !important; }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
         body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; width: 100%; }
@@ -22,43 +18,32 @@
         .content-area { width: 100%; text-align: left; }
         .content-area h1, .content-area h2 { color: #5a8ccf; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; }
 
-        /* THE GLOWING PROJECT CARD - CHAMPAGNE GOLD TEXT */
+        /* THE GLOWING CARD */
         .github-card {
             display: inline-block;
-            margin: 30px 0;
-            padding: 15px 30px;
+            margin: 20px 0;
+            padding: 12px 25px;
             background: #1e233c;
             border: 1px solid #2d3748;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
-            color: #E6BE8A !important; 
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            color: #E6BE8A !important;
+            font-weight: 600;
+            transition: 0.3s;
         }
         .github-card:hover {
             border-color: #3b82f6;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-            transform: translateY(-5px);
-            color: #3b82f6 !important;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            transform: translateY(-3px);
         }
 
         .content-area img { max-width: 85%; height: auto; display: block; margin: 30px auto; border-radius: 12px; border: 1px solid #2d3748; }
         footer { margin: 80px auto 40px; padding-top: 40px; border-top: 1px solid #2d3748; width: 80%; text-align: center; }
-        {{ if eq .Title "Contact" }} .footer-socials { display: none !important; } {{ end }}
     </style>
 </head>
 <body>
     <header><a href="/" class="logo">Pruddieverse</a><nav><a href="/projects">Projects</a><a href="/about">About</a><a href="/contact">Contact</a></nav></header>
     <div class="container"><div class="content-area">{{ .Content }}</div></div>
-    <footer>
-        <div class="footer-socials" style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
-            <a href="https://github.com/Cwendee" target="_blank" style="color: #9ca3af;"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" target="_blank" style="color: #9ca3af;"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:pruddyanumudu@gmail.com" style="color: #9ca3af;"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p style="margin-top: 20px; color: #9ca3af;">© 2025 Prudence Anumudu</p>
-    </footer>
+    <footer><p style="color: #9ca3af;">© 2025 Prudence Anumudu</p></footer>
 </body>
 </html>
