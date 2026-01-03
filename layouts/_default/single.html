@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | Pruddieverse</title>
     
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="{{ "favicon.png" | absURL }}">
+    <link rel="shortcut icon" type="image/png" href="{{ "favicon.png" | absURL }}">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Global Anchor-Link suppression */
-        .anchor, .heading-link, h1 a, h2 a, h3 a, h4 a, .header-link { 
-            display: none !important; visibility: hidden !important; opacity: 0 !important;
-        }
-
+        /* Remove # symbols from headings */
+        .anchor, .heading-link, h1 a, h2 a, h3 a, h4 a, .header-link { display: none !important; }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
-        .skip-link, .screen-reader-text, .buttons, .pagination { display: none !important; }
         body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
         
         header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; width: 100%; }
@@ -26,37 +23,35 @@
 
         .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 900px; margin: 0 auto; }
         .content-area { width: 100%; text-align: left; }
-        
         .content-area h1, .content-area h2 { color: #5a8ccf; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; }
-        .content-area p { margin-bottom: 20px; font-size: 1.1rem; }
 
-        .content-area img { 
-            max-width: 85%; height: auto; display: block; margin: 30px auto; 
-            border-radius: 12px; border: 1px solid #2d3748; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+        /* THE GLOWING PROJECT BOX */
+        .github-card {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 25px;
+            background: #1e233c;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #E6BE8A !important; /* Gold text to match 'Open Case Study' */
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .github-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            transform: translateY(-3px);
         }
 
+        .content-area img { max-width: 85%; height: auto; display: block; margin: 30px auto; border-radius: 12px; border: 1px solid #2d3748; }
         footer { margin: 80px auto 40px; padding-top: 40px; border-top: 1px solid #2d3748; width: 80%; text-align: center; }
-
-        {{ if eq .Title "Contact" }}
-        .footer-socials { display: none !important; }
-        {{ end }}
+        {{ if eq .Title "Contact" }} .footer-socials { display: none !important; } {{ end }}
     </style>
 </head>
 <body>
-    <header>
-        <a href="/" class="logo">Pruddieverse</a>
-        <nav>
-            <a href="/projects">Projects</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="content-area">
-            {{ .Content }}
-        </div>
-    </div>
+    <header><a href="/" class="logo">Pruddieverse</a><nav><a href="/projects">Projects</a><a href="/about">About</a><a href="/contact">Contact</a></nav></header>
+    <div class="container"><div class="content-area">{{ .Content }}</div></div>
     <footer>
         <div class="footer-socials" style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
             <a href="https://github.com/Cwendee" target="_blank" style="color: #9ca3af;"><i class="fab fa-github"></i></a>
