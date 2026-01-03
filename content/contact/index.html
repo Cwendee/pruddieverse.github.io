@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+        .contact-container { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            padding: 60px 20px; 
+            color: #9ca3af; 
+            font-family: 'Inter', sans-serif; 
+        }
+
+        .contact-intro { 
+            max-width: 650px; 
+            font-size: 1.2rem; 
+            line-height: 1.6; 
+            margin-bottom: 50px; 
+            color: #9ca3af;
+        }
+
+        /* GLOWING CONTACT CARDS */
+        .contact-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 25px; 
+            list-style: none; 
+            width: 100%;
+        }
+
+        .contact-card { 
+            background: #1e233c; 
+            border: 1px solid #2d3748; 
+            border-radius: 15px;
+            width: 180px; 
+            height: 180px; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            text-decoration: none; 
+            color: #9ca3af;
+        }
+
+        .contact-card i { 
+            font-size: 3rem; 
+            margin-bottom: 15px; 
+        }
+
+        .contact-card span {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* BLUE GLOW ON HOVER */
+        .contact-card:hover { 
+            transform: translateY(-10px); 
+            border-color: #3b82f6; 
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5); 
+            color: #3b82f6; 
+        }
+
+        /* HIDDEN ELEMENTS */
+        .skip-link, .heading-link, .anchor { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <p class="contact-intro">
+            Open to discussions on DevOps, Cloud Architecture, or mentorship — reach out through any of the platforms below.
+        </p>
+
+        <div class="contact-grid">
+            <a href="mailto:pruddyanumudu@gmail.com" class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+            <a href="https://github.com/Cwendee" target="_blank" class="contact-card">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656/" target="_blank" class="contact-card">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
