@@ -8,60 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #14182d; color: #9ca3af; font-family: 'Montserrat', sans-serif; line-height: 1.7; margin: 0; }
+        body { background-color: #14182d; color: #9ca3af; font-family: 'Montserrat', sans-serif; line-height: 1.6; margin: 0; }
         header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; }
         .logo { color: #E6BE8A; text-decoration: none; font-size: 1.5rem; font-weight: 700; }
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: left; }
-        
-        /* --- PROJECT PAGE RULES --- */
-        /* Main Title: Large & Blue */
-        .container p:first-of-type strong:first-child { 
-            color: #5a8ccf !important; 
-            font-size: 1.4rem !important; 
-            display: block; 
-            margin-bottom: 25px;
-        }
-        /* Sub-headings: Grey, Bold, Own Line */
-        .container p strong:not(:first-child) { 
-            color: #9ca3af !important; 
-            font-size: 1.05rem !important; 
-            font-weight: 700;
-            display: block; 
-            margin-top: 25px; 
-            margin-bottom: 5px;
-        }
-
-        /* --- CONTACT PAGE RULES (LOCKED) --- */
-        .contact-grid { 
-            display: flex !important; 
-            flex-direction: row !important; 
-            justify-content: center !important; 
-            gap: 20px !important; 
-            margin: 50px auto !important;
-            flex-wrap: nowrap; 
-        }
-        .contact-card { 
-            background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; 
-            width: 150px !important; height: 120px !important; 
-            display: flex; flex-direction: column; justify-content: center; align-items: center; 
-            text-decoration: none; color: #9ca3af; transition: 0.3s; 
-        }
-        .contact-card i { font-size: 2rem; margin-bottom: 10px; }
-        .contact-card span { font-weight: 700; font-size: 0.85rem; }
-
-        /* --- BUTTONS & FOOTER --- */
-        .container a[href^="https://github.com/"] {
-            display: inline-block; margin: 30px 0; padding: 12px 25px; background: #1e233c; 
-            border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; 
-            color: #E6BE8A !important; font-weight: 700; transition: 0.3s;
-        }
+        .container a[href^="https://github.com/"] { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #1e233c; border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; color: #E6BE8A !important; font-weight: 700; }
         footer { margin-top: 60px; padding: 40px; border-top: 1px solid #2d3748; text-align: center; }
     </style>
 </head>
 <body>
     <header><a href="/" class="logo">Pruddieverse</a><nav><a href="/projects">Projects</a><a href="/about">About</a><a href="/contact">Contact</a></nav></header>
-    <div class="container">{{ .Content }}</div>
+    <div class="container">{{ .Content | safeHTML }}</div>
     <footer><p>© 2025 Prudence Anumudu</p></footer>
 </body>
 </html>
