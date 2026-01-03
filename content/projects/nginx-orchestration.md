@@ -19,3 +19,5 @@ The environment was provisioned using an Ansible Control Node. I verified the se
 
 
 <a href="https://github.com/Cwendee/multi-az-nginx-orchestration" class="github-card">➡️ See Full Project</a>
+
+<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" class="github-card">➡️ See Full Project</a>

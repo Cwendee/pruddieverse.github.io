@@ -21,3 +21,5 @@ The deployment was verified by running connectivity tests and ensuring the web a
 
 
 <a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ See Full Project</a>
+
+<a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ See Full Project</a>
