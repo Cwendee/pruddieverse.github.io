@@ -4,12 +4,14 @@ date: 2026-01-03
 summary: "Automated the provisioning and configuration of a multi-node web infrastructure on AWS using Ansible."
 ---
 
-🚀 **Automated Multi-Node Infrastructure (Ansible + AWS)**
+# Automated Multi-Node Infrastructure (Ansible + AWS)
 
 **Summary**
+
 Automated the provisioning and configuration of a multi-node web infrastructure on AWS using Ansible, transitioning from manual setup to fully orchestrated Infrastructure as Code.
 
 **🎯 Problem & Objective**
+
 Manual server configuration does not scale and often leads to inconsistencies. This project demonstrates how configuration management can enforce consistency, idempotency, and scalability across multiple cloud servers.
 
 **🧠 What I Built**
