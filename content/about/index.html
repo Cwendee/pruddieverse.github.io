@@ -4,22 +4,47 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/favicon.png">
     <style>
-        /* SITE-WIDE FIX FOR THE # SYMBOL */
         .anchor, .heading-link, .share-link { display: none !important; }
         
         .about-container { max-width: 800px; margin: 0 auto; color: #9ca3af; font-family: 'Inter', sans-serif; }
         .section-title { color: #5a8ccf; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; }
         .text-p { margin-bottom: 20px; line-height: 1.7; font-size: 1.1rem; }
         
-        /* CERTIFICATION CARDS - FORCED VISIBILITY */
-        .cert-stack { display: flex; flex-direction: column; gap: 12px; margin: 25px 0; }
-        .cert-card { 
-            background: #1e233c; border: 1px solid #2d3748; border-radius: 10px; padding: 18px;
-            transition: 0.3s; color: #9ca3af;
+        /* CERTIFICATION CARDS - FORM FITTING & BOUNCY */
+        .cert-stack { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: flex-start; /* Keeps cards from stretching full width */
+            gap: 12px; 
+            margin: 25px 0; 
         }
-        .cert-card strong { color: #E6BE8A; display: block; margin-bottom: 4px; }
+        
+        .cert-card { 
+            background: #1e233c; 
+            border: 1px solid #2d3748; 
+            border-radius: 10px; 
+            padding: 12px 20px;
+            color: #9ca3af;
+            display: inline-block; /* Only as wide as the content */
+            cursor: default;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Smooth entry for bounce */
+        }
 
-        /* EXPERIENCE SECTION - NO JAMPACKING */
+        .cert-card strong { color: #E6BE8A; margin-right: 8px; }
+
+        /* BOUNCE ANIMATION ON TOUCH/HOVER */
+        .cert-card:hover { 
+            transform: scale(1.05); /* Slight grow */
+            border-color: #3b82f6; 
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+            animation: bounce 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1.05); }
+            50% { transform: scale(0.95); }
+        }
+
         .exp-item { margin-bottom: 15px; display: block; line-height: 1.8; }
     </style>
 </head>
@@ -33,11 +58,11 @@
 
         <h2 class="section-title">🎓 Certifications & Learning</h2>
         <div class="cert-stack">
-            <div class="cert-card"><strong>🚀 AWS Solutions Architect Associate (SAA) — ALX Africa</strong> November 2025</div>
-            <div class="cert-card"><strong>🛠️ Women Techsters Fellowship — DevOps Engineering Track</strong> 2025 – 2026</div>
-            <div class="cert-card"><strong>☁️ AWS Certified Cloud Practitioner — ALX Africa</strong> June 2025</div>
-            <div class="cert-card"><strong>⚙️ DevOps Engineering — LearnWithPride Limited</strong> September 2024</div>
-            <div class="cert-card"><strong>🔐 Microsoft Learning Series — Cybersecurity, Networking & Cloud</strong> 2023 – 2024</div>
+            <div class="cert-card"><strong>🚀 AWS Solutions Architect Associate (SAA)</strong> ALX Africa | Nov 2025</div>
+            <div class="cert-card"><strong>🛠️ Women Techsters Fellowship</strong> DevOps Engineering Track | 2025 – 2026</div>
+            <div class="cert-card"><strong>☁️ AWS Certified Cloud Practitioner</strong> ALX Africa | June 2025</div>
+            <div class="cert-card"><strong>⚙️ DevOps Engineering</strong> LearnWithPride Limited | Sept 2024</div>
+            <div class="cert-card"><strong>🔐 Microsoft Learning Series</strong> Cybersecurity & Cloud | 2023 – 2024</div>
         </div>
 
         <h2 class="section-title">💼 Experience</h2>
