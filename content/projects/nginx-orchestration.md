@@ -1,10 +1,10 @@
 ---
 title: "Multi-AZ Nginx Orchestration with Ansible (AWS)"
-date: 2026-01-03
+date: 2025-01-03
 summary: "Designed and automated a highly available Nginx web infrastructure across multiple AWS Availability Zones."
 ---
 
-# Multi-AZ Nginx Orchestration with Ansible (AWS)
+**Multi-AZ Nginx Orchestration with Ansible (AWS)**
 
 **Summary**
 
@@ -17,7 +17,7 @@ Single-zone deployments introduce availability risks and manual configurations d
 **🧠 What I Built**
 * Architected a Multi-AZ EC2 deployment to improve fault tolerance
 * Automated Nginx installation and configuration using Ansible
-* Orchestrated consistent configurations across all nodes from a central control host
+* Orchedstrated consistent configurations across all nodes from a central control host
 * Ensured idempotent playbook execution to maintain predictable infrastructure state
 
 **🛠 Tools & Technologies**
@@ -32,4 +32,4 @@ Ansible · AWS EC2 · Nginx · Git · Linux
 * Practical automation techniques for high-availability architectures
 * Infrastructure security best practices, including the protection of sensitive system details
 
-<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" class="github-card">➡️ View full project</a>
+<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" target="_blank" class="github-card">➡️ View full project</a>

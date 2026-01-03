@@ -1,10 +1,10 @@
 ---
 title: "Automated Multi-Node Infrastructure (Ansible + AWS)"
-date: 2026-01-03
+date: 2025-01-03
 summary: "Automated the provisioning and configuration of a multi-node web infrastructure on AWS using Ansible."
 ---
 
-# Automated Multi-Node Infrastructure (Ansible + AWS)
+**Automated Multi-Node Infrastructure (Ansible + AWS)**
 
 **Summary**
 
@@ -12,7 +12,7 @@ Automated the provisioning and configuration of a multi-node web infrastructure 
 
 **🎯 Problem & Objective**
 
-Manual server configuration does not scale and often leads to inconsistencies. This project demonstrates how configuration management can enforce consistency, idempotency, and scalability across multiple cloud servers.
+Single-zone deployments introduce availability risks and manual configurations do not scale. This project demonstrates how automation and orchestration can deliver high availability, consistency, and reliability across distributed cloud infrastructure.
 
 **🧠 What I Built**
 * Designed a 1-to-2 orchestration architecture where a single Ansible control node manages multiple EC2 instances
@@ -33,4 +33,4 @@ Ansible · AWS EC2 · Apache (httpd) · Git · Linux
 * Practical use of regex in configuration automation
 * Applying security best practices by protecting sensitive infrastructure details
 
-<a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ View full project</a>
+<a href="https://github.com/Cwendee/ansible-web-orchestration-lab" target="_blank" class="github-card">➡️ View full project</a>
