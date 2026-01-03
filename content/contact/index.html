@@ -3,19 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        .contact-container { display: flex; flex-direction: column; align-items: center; text-align: center; color: #9ca3af; }
-        .contact-intro { max-width: 600px; font-size: 1.1rem; margin-bottom: 40px; line-height: 1.6; }
-        .contact-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; }
-        
-        .contact-card { 
-            background: #1e233c; border: 1px solid #2d3748; border-radius: 12px;
-            width: 140px; height: 110px; display: flex; flex-direction: column;
-            align-items: center; justify-content: center; transition: 0.3s;
-            text-decoration: none; color: #9ca3af;
+        .contact-container { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            color: #9ca3af; 
         }
-        .contact-card:hover { transform: translateY(-5px); border-color: #3b82f6; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); color: #3b82f6; }
-        .contact-emoji { font-size: 2rem; margin-bottom: 8px; }
-        .contact-label { font-weight: 600; font-size: 0.9rem; }
+        
+        /* INCREASED SPACING HERE */
+        .contact-intro { 
+            max-width: 600px; 
+            font-size: 1.1rem; 
+            margin-bottom: 70px; 
+            line-height: 1.6; 
+        }
+        
+        .contact-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 20px; 
+            list-style: none; 
+        }
+        
+        /* EVEN SMALLER CARDS */
+        .contact-card { 
+            background: #1e233c; 
+            border: 1px solid #2d3748; 
+            border-radius: 12px;
+            width: 120px; 
+            height: 90px; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            transition: 0.3s;
+            text-decoration: none; 
+            color: #9ca3af;
+        }
+        
+        .contact-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #3b82f6; 
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); 
+            color: #3b82f6; 
+        }
+        
+        .contact-emoji { 
+            font-size: 1.8rem; 
+            margin-bottom: 5px; 
+        }
+        
+        .contact-label { 
+            font-weight: 600; 
+            font-size: 0.85rem; 
+        }
     </style>
 </head>
 <body>
