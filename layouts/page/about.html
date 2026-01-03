@@ -4,26 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Pruddieverse</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* KILL EVERYTHING UNWANTED */
         * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
-        .skip-link, .screen-reader-text { display: none !important; }
-        body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.8; }
-        .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 800px; margin: 0 auto; text-align: center; }
-        h1 { color: #9ca3af; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.2rem; margin-bottom: 30px; }
-        .content-text { text-align: left; color: #9ca3af; font-size: 1.1rem; }
-        .content-text p { margin-bottom: 20px; }
+        .skip-link, .screen-reader-text, .heading-link, .anchor { display: none !important; }
+
+        body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; }
+        .logo { color: #E6BE8A; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; text-decoration: none; font-weight: 500; }
+        nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 600; }
+
+        .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+        
+        /* HEADINGS IN LIGHT BLUE */
+        .section-title { color: #3b82f6; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; width: 100%; text-align: left; }
+        .text-block { width: 100%; text-align: left; font-size: 1.1rem; margin-bottom: 20px; }
+
+        /* CERTIFICATION CARDS */
+        .cert-grid { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; width: 100%; }
+        .cert-card { 
+            background: #1e233c; border: 1px solid #2d3748; border-radius: 10px; padding: 12px;
+            font-size: 0.85rem; transition: 0.3s; color: #9ca3af; flex: 1 1 calc(33% - 15px); min-width: 200px;
+        }
+        .cert-card:hover { border-color: #3b82f6; box-shadow: 0 0 10px #3b82f6; }
+
+        /* NO BULLETS */
+        .no-bullets { list-style: none; width: 100%; text-align: left; }
+        .no-bullets li { margin-bottom: 12px; }
+
+        footer { margin: 80px auto 40px; padding-top: 40px; border-top: 1px solid #2d3748; width: 80%; text-align: center; }
     </style>
 </head>
 <body>
-    {{ partial "header.html" . }}
+    <header>
+        <a href="/" class="logo">Pruddieverse</a>
+        <nav>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>About Me</h1>
-        <div class="content-text">
-            {{ .Content }}
+        <h2 class="section-title">The Evolution: Resilience in Motion</h2>
+        <div class="text-block">
+            I didn’t begin my career with code; I began with people. As a Customer Service professional across health, e-commerce, and transportation & logistics, I have engaged customers in person, over the phone, and via email. These experiences sharpened my ability to think on my feet, solve problems in real time, and perform under pressure. The curiosity and drive for growth led me into Service Assurance at Red Star Express (FedEx), where I support operational excellence and reliable service delivery.
         </div>
+
+        <h2 class="section-title">The Pivot: Driven by Curiosity</h2>
+        <div class="text-block">
+            Curiosity has always shaped how I work. Beyond following workflows, I focus on understanding systems and how they can be optimized. This drive to explore the how and why led me into DevOps. As I transition into tech, I bring with me years of resilience, operational thinking, and a solution-first mindset applied to cloud environments.
+        </div>
+
+        <h2 class="section-title">🎓 Certifications & Learning</h2>
+        <div class="cert-grid">
+            <div class="cert-card">🚀 AWS Solutions Architect Assoc. (Nov 2025)</div>
+            <div class="cert-card">🛠️ Women Techsters DevOps (2025-2026)</div>
+            <div class="cert-card">☁️ AWS Cloud Practitioner (June 2025)</div>
+            <div class="cert-card">⚙️ DevOps Engineering (Sept 2024)</div>
+            <div class="cert-card">🔐 Microsoft Learning Series (2024)</div>
+        </div>
+
+        <h2 class="section-title">💼 Experience</h2>
+        <div class="text-block"><strong>AWS Technical Mentor (Volunteer)</strong> | <em>Oct 2025 – Present</em></div>
+        <ul class="no-bullets">
+            <li>🤝 Mentoring learners on AWS fundamentals and cloud concepts</li>
+            <li>📘 Supporting labs, hands-on projects, and best practices</li>
+            <li>🌱 Contributing to community-driven learning and skill growth</li>
+        </ul>
+
+        <p style="margin-top: 50px; text-align: center; width: 100%;">🌱 Continuously learning, building, and applying cloud and DevOps best practices.</p>
     </div>
-    {{ partial "footer.html" . }}
+
+    <footer>
+        <div style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
+            <a href="https://github.com/Cwendee" target="_blank" style="color: #9ca3af;"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" target="_blank" style="color: #9ca3af;"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:pruddyanumudu@gmail.com" style="color: #9ca3af;"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="margin-top: 20px; color: #9ca3af; font-size: 0.9rem;">© 2025 Prudence Anumudu</p>
+    </footer>
 </body>
 </html>
