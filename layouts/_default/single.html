@@ -1,57 +1,70 @@
-{{ define "main" }}
-<style>
-  /* Softer, warm grey for the main project titles */
-  .project-title {
-    color: #94a3b8; /* Slate-400 (Soft grey/blue) */
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | Pruddieverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* KILL THE THEME COMPLETELY */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
+        .skip-link, .screen-reader-text, [href="#content"], .buttons, .pagination, .heading-link { 
+            display: none !important; visibility: hidden !important; 
+        }
 
-  /* Sophisticated Steel-Blue Button */
-  .explore-button {
-    display: inline-block;
-    margin-top: 3rem;
-    padding: 1rem 2.5rem;
-    background: #334155; /* Slate-700 */
-    color: #f1f5f9 !important; /* Soft white text */
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    border-radius: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: none !important;
-  }
-  
-  .explore-button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
-    background: #475569; /* Slightly lighter slate on hover */
-    border-color: #64748b;
-    color: #ffffff !important;
-  }
-</style>
+        body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        
+        /* HEADER (MATCHING HOME PAGE) */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; }
+        .logo { color: #E6BE8A; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; text-decoration: none; font-weight: 500; }
+        nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 600; }
 
-<article class="max-w-4xl mx-auto px-4 py-20">
-  <header class="mb-12">
-    <h1 class="text-4xl md:text-7xl font-bold tracking-tighter mb-6 project-title leading-[0.85]">
-      {{ .Title }}
-    </h1>
-    <div class="h-1 w-20 bg-slate-700"></div>
-  </header>
+        .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+        h1 { color: #9ca3af; font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 40px; }
 
-  <div class="prose prose-invert prose-slate max-w-none text-slate-400 text-lg leading-relaxed">
-    {{ .Content }}
-  </div>
+        /* CONTENT AREA */
+        .content-area { width: 100%; text-align: left; }
+        .content-area h2 { color: #E6BE8A; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; }
+        .content-area p { margin-bottom: 20px; font-size: 1.1rem; }
 
-  <div class="text-center mt-12">
-    <a href="{{ .Params.github_link }}" target="_blank" class="explore-button">
-      🚀 Explore Project
-    </a>
-  </div>
+        /* CERTIFICATION CARDS (SMALL & NEAT) */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; list-style: none; }
+        .cert-card { 
+            background: #1e233c; border: 1px solid #2d3748; border-radius: 10px; padding: 15px;
+            font-size: 0.85rem; text-align: center; transition: 0.3s;
+        }
+        .cert-card:hover { border-color: #3b82f6; box-shadow: 0 0 10px #3b82f6; transform: translateY(-3px); }
 
-  <div class="mt-20 pt-10 border-t border-white/5 text-center">
-    <a href="/projects/" class="text-slate-500 hover:text-accent uppercase tracking-[0.3em] text-xs font-bold transition-colors">
-      &larr; Return to Laboratory
-    </a>
-  </div>
-</article>
-{{ end }}
+        /* FOOTER */
+        footer { margin: 80px auto 40px; padding-top: 40px; border-top: 1px solid #2d3748; width: 80%; text-align: center; }
+        .copyright { font-size: 0.9rem; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Pruddieverse</a>
+        <nav>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <div class="content-area">
+            {{ .Content }}
+        </div>
+    </div>
+
+    <footer>
+        <div style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
+            <a href="https://github.com/Cwendee" target="_blank" style="color: #9ca3af;"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" target="_blank" style="color: #9ca3af;"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:pruddyanumudu@gmail.com" style="color: #9ca3af;"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">© 2025 Prudence Anumudu</p>
+    </footer>
+</body>
+</html>
