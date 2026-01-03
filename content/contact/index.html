@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        /* THIS IS THE NUCLEAR FIX: HIDE THE FOOTER ICONS ONLY ON THIS PAGE */
+        footer div[style*="display: flex"], 
+        .footer-socials, 
+        footer .social-icons { 
+            display: none !important; 
+        }
+
         .contact-container { 
             display: flex; 
             flex-direction: column; 
@@ -12,7 +19,6 @@
             padding-top: 40px;
         }
         
-        /* MAXIMUM SPACING APPLIED HERE */
         .contact-intro { 
             max-width: 600px; 
             font-size: 1.15rem; 
