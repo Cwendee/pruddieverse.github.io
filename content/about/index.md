@@ -10,11 +10,11 @@ Curiosity has always shaped how I work. Beyond following workflows, I focus on u
 
 ## 🎓 Certifications & Learning
 <div class="cert-grid">
-    <div class="cert-card">🚀 AWS Solutions Architect Assoc. (Nov 2025)</div>
-    <div class="cert-card">🛠️ Women Techsters DevOps (2025-2026)</div>
-    <div class="cert-card">☁️ AWS Cloud Practitioner (June 2025)</div>
-    <div class="cert-card">⚙️ DevOps Engineering (Sept 2024)</div>
-    <div class="cert-card">🔐 Microsoft Learning Series (2024)</div>
+    <div class="cert-card"><strong>🚀 AWS Solutions Architect Associate (SAA) — ALX Africa</strong> November 2025</div>
+    <div class="cert-card"><strong>🛠️ Women Techsters Fellowship — DevOps Engineering Track</strong> 2025 – 2026</div>
+    <div class="cert-card"><strong>☁️ AWS Certified Cloud Practitioner — ALX Africa</strong> June 2025</div>
+    <div class="cert-card"><strong>⚙️ DevOps Engineering — LearnWithPride Limited</strong> September 2024</div>
+    <div class="cert-card"><strong>🔐 Microsoft Learning Series — Cybersecurity, Networking & Cloud Computing</strong> 2023 – 2024</div>
 </div>
 
 ## 💼 Experience
