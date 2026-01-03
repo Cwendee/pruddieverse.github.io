@@ -18,3 +18,5 @@ For a deep dive into the technical execution, including terminal logs showing th
 <a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ See Full Project</a>
 
 The deployment was verified by running connectivity tests and ensuring the web application was accessible via the Load Balancer IP.
+
+<a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ See Full Project</a>
