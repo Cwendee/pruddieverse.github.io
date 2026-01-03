@@ -1,14 +1,13 @@
 ---
 title: "Multi-AZ Nginx Orchestration"
 date: 2025-12-27
-description: "High-availability load balancing across AWS Availability Zones."
+summary: "High-availability load balancing across AWS Availability Zones."
 ---
 
 ## Overview
 This project demonstrates the deployment of a highly available Nginx web server environment. By utilizing multiple Availability Zones (AZs), the setup ensures that the application remains reachable even if one zone experiences an outage.
 
 ## Architecture
-
 
 The setup includes an Application Load Balancer (ALB) distributing traffic to Nginx instances residing in different Private Subnets across two Availability Zones.
 
