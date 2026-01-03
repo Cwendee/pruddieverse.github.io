@@ -1,6 +1,5 @@
 ---
 title: "Contact"
-layout: "contact"
 ---
 
 I’m always open to discussing cloud infrastructure, DevOps automation, or new technical opportunities. Feel free to reach out through any of the platforms below!
