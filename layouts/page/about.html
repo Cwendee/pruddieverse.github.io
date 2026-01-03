@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Pruddieverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
+        .skip-link, .screen-reader-text { display: none !important; }
+        body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.8; }
+        .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 800px; margin: 0 auto; text-align: center; }
+        h1 { color: #9ca3af; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.2rem; margin-bottom: 30px; }
+        .content-text { text-align: left; color: #9ca3af; font-size: 1.1rem; }
+        .content-text p { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    {{ partial "header.html" . }}
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="content-text">
+            {{ .Content }}
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+</html>
