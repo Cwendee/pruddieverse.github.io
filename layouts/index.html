@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pruddieverse</title>
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
@@ -13,8 +15,16 @@
 
         /* HEADER */
         header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; }
-        /* VIBRANT ROYAL GOLD LOGO */
-        .logo { color: #FFD700; font-family: 'Playfair Display', serif; font-size: 2.2rem; text-decoration: none; font-weight: 900; }
+        
+        /* WARM CHAMPAGNE GOLD - LESS BOLD, FANCY FONT */
+        .logo { 
+            color: #E6BE8A; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.8rem; 
+            text-decoration: none; 
+            font-weight: 500; 
+            letter-spacing: 1px;
+        }
         nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 600; }
 
         /* HERO AREA */
@@ -22,35 +32,48 @@
         
         .headshot { width: 260px; height: 360px; object-fit: cover; border-radius: 15px; border: 3px solid #2d3748; margin-bottom: 40px; }
 
-        /* EXTRA BOLD HEADLINE */
-        h1 { color: #ffffff; font-weight: 800; font-size: 2.5rem; margin-bottom: 15px; letter-spacing: -1px; }
-        .bio { max-width: 600px; margin-bottom: 50px; font-size: 1.1rem; }
+        /* GREY BOLD HEADLINE - MONTSERRAT FONT */
+        h1 { 
+            color: #9ca3af; 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 700; 
+            font-size: 2.2rem; 
+            margin-bottom: 15px; 
+        }
+        .bio { max-width: 600px; margin-bottom: 50px; font-size: 1.1rem; color: #9ca3af; }
 
         /* SMALLER SKILL CARDS */
-        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; list-style: none; margin-bottom: 100px; }
+        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; margin-bottom: 100px; }
         .skill-card { 
             background: #1e233c; border: 1px solid #2d3748; border-radius: 10px;
-            width: 85px; height: 85px; display: flex; flex-direction: column;
+            width: 75px; height: 75px; display: flex; flex-direction: column;
             align-items: center; justify-content: center; transition: 0.3s;
-            font-size: 0.75rem;
+            font-size: 0.7rem; color: #9ca3af;
         }
-        .skill-card i { font-size: 1.3rem; margin-bottom: 6px; }
+        .skill-card i { font-size: 1.2rem; margin-bottom: 4px; }
         .skill-card:hover { transform: translateY(-5px); box-shadow: 0 0 15px #3b82f6; border-color: #3b82f6; color: #3b82f6; }
 
-        /* GREY CTA BUTTON - LOWERED */
+        /* GREY CTA BUTTON - BLUE GLOW ON HOVER */
         .cta { 
             display: inline-flex; align-items: center; 
-            background: #2d3748; /* GREY BOX */
-            color: #ffffff; 
+            background: #2d3748; 
+            color: #9ca3af; /* GREY TEXT */
             padding: 15px 35px; border-radius: 10px; text-decoration: none; 
-            margin-bottom: 100px; font-weight: 600; transition: 0.3s;
+            margin-bottom: 100px; font-weight: 600; transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
-        .cta:hover { background: #4a5568; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .cta:hover { 
+            color: #3b82f6; /* TEXT TURNS BLUE */
+            border-color: #3b82f6; 
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); 
+            background: #1e233c; 
+        }
 
         /* FOOTER */
         footer { margin-top: 20px; padding-bottom: 60px; border-top: 1px solid #2d3748; width: 80%; padding-top: 40px; }
         .socials { display: flex; justify-content: center; gap: 40px; font-size: 2rem; margin-bottom: 30px; }
-        .socials a { color: #9ca3af; }
+        .socials a { color: #9ca3af; transition: 0.3s; }
+        .socials a:hover { color: #3b82f6; }
         .copyright { font-size: 0.9rem; color: #9ca3af; }
     </style>
 </head>
@@ -73,7 +96,7 @@
             <li class="skill-card"><i class="fab fa-aws"></i>AWS</li>
             <li class="skill-card"><i class="fab fa-docker"></i>Docker</li>
             <li class="skill-card"><i class="fab fa-fort-awesome"></i>K8s</li>
-            <li class="skill-card"><i class="fas fa-code"></i>Terraform</li>
+            <li class="skill-card"><i class="fas fa-code"></i>TF</li>
             <li class="skill-card"><i class="fas fa-server"></i>Ansible</li>
             <li class="skill-card"><i class="fab fa-jenkins"></i>Jenkins</li>
             <li class="skill-card"><i class="fab fa-github"></i>GitHub</li>
