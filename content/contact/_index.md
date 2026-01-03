@@ -2,7 +2,7 @@
 title: "Contact"
 ---
 
-I’m always open to discussing cloud infrastructure, DevOps automation, or new technical opportunities. Feel free to reach out through any of the platforms below!
+Open to discussions on DevOps, Cloud Architecture, or mentorship. Feel free to reach out through any of the platforms below.
 
 <div class="contact-grid">
     <a href="https://github.com/Cwendee" target="_blank" class="contact-card">
