@@ -1,7 +1,7 @@
 ---
 title: "Project 1: Ansible Web Orchestration"
 date: 2025-12-27
-draft: false
+summary: "Moving from manual configurations to automated orchestration with Ansible on AWS."
 ---
 
 ## Overview
@@ -13,9 +13,5 @@ The architecture consists of an Ansible Control Node managing multiple target ho
 
 ## Execution & Verification
 For a deep dive into the technical execution, including terminal logs showing the Ansible playbook runs and the final live service verification:
-
-<a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ See Full Project</a>
-
-The deployment was verified by running connectivity tests and ensuring the web application was accessible via the Load Balancer IP.
 
 <a href="https://github.com/Cwendee/ansible-web-orchestration-lab" class="github-card">➡️ See Full Project</a>

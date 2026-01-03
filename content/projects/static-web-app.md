@@ -1,7 +1,7 @@
 ---
 title: "Project 2: Multi-AZ Nginx Orchestration"
 date: 2025-12-27
-draft: false
+summary: "High-availability load balancing across AWS Availability Zones."
 ---
 
 ## Overview
@@ -13,7 +13,5 @@ The setup includes an Application Load Balancer (ALB) distributing traffic to Ng
 
 ## Execution & Verification
 The environment was provisioned using an Ansible Control Node. I verified the setup by intentionally stopping one instance and observing the Load Balancer redirecting traffic to the healthy node, ensuring zero downtime.
-
-<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" class="github-card">➡️ See Full Project</a>
 
 <a href="https://github.com/Cwendee/multi-az-nginx-orchestration" class="github-card">➡️ See Full Project</a>
