@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* THIS IS THE NUCLEAR FIX: HIDE THE FOOTER ICONS ONLY ON THIS PAGE */
+        /* HIDE THE FOOTER ICONS ONLY ON THIS PAGE */
         footer div[style*="display: flex"], 
         .footer-socials, 
         footer .social-icons { 
@@ -19,6 +19,7 @@
             padding-top: 40px;
         }
         
+        /* RESTORING YOUR 140PX MARGIN */
         .contact-intro { 
             max-width: 600px; 
             font-size: 1.15rem; 
@@ -35,6 +36,7 @@
             list-style: none; 
         }
         
+        /* RESTORING YOUR 120x90 CARDS */
         .contact-card { 
             background: #1e233c; 
             border: 1px solid #2d3748; 
@@ -45,16 +47,22 @@
             flex-direction: column;
             align-items: center; 
             justify-content: center; 
-            transition: 0.3s;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             text-decoration: none; 
             color: #9ca3af;
         }
         
         .contact-card:hover { 
-            transform: translateY(-5px); 
+            transform: scale(1.1); 
             border-color: #3b82f6; 
             box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); 
             color: #3b82f6; 
+            animation: bounce 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1.1); }
+            50% { transform: scale(0.9); }
         }
         
         .contact-emoji { 
