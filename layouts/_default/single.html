@@ -14,14 +14,24 @@
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
 
-        /* Project Styling */
-        .container p strong:first-child { color: #5a8ccf; font-size: 1.4rem; display: block; margin-bottom: 20px; }
-        .container p strong { color: #9ca3af; font-weight: 700; font-size: 1.1rem; display: block; margin-top: 25px; }
+        /* Project Title Style */
+        .container p:first-of-type strong:first-child { color: #5a8ccf !important; font-size: 1.4rem !important; display: block; margin-bottom: 25px; }
+        
+        /* Sub-headings Style (Grey, Bold, forced to own line) */
+        .container strong { color: #9ca3af; font-weight: 700; font-size: 1.05rem; display: block; margin-top: 25px; margin-bottom: 2px; }
+        
+        /* List fix: make sure bold text inside lists doesn't break the layout */
+        .container li strong { display: inline; color: inherit; font-size: inherit; }
 
-        /* Contact Grid Fix */
-        .contact-grid { display: flex; justify-content: center; gap: 20px; margin-top: 50px; }
-        .contact-card { background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; width: 150px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: #9ca3af; transition: 0.3s; box-sizing: border-box; }
-        .contact-card:hover { border-color: #3b82f6; color: #E6BE8A; }
+        /* Contact Grid Fix: Forced Horizontal & Equal Sizes */
+        .contact-grid { display: flex !important; justify-content: center !important; gap: 20px !important; margin-top: 50px !important; flex-wrap: nowrap !important; }
+        .contact-card { 
+            background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; 
+            flex: 0 0 150px !important; /* Forces exact width */
+            height: 120px !important; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-decoration: none; color: #9ca3af; 
+        }
         .contact-card i { font-size: 2rem; margin-bottom: 10px; }
         .contact-card span { font-weight: 700; font-size: 0.85rem; }
 
