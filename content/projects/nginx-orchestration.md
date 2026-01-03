@@ -17,7 +17,7 @@ Single-zone deployments introduce availability risks and manual configurations d
 **🧠 What I Built**
 * Architected a Multi-AZ EC2 deployment to improve fault tolerance
 * Automated Nginx installation and configuration using Ansible
-* Orchedstrated consistent configurations across all nodes from a central control host
+* Orchestrated consistent configurations across all nodes from a central control host
 * Ensured idempotent playbook execution to maintain predictable infrastructure state
 
 **🛠 Tools & Technologies**
@@ -32,4 +32,4 @@ Ansible · AWS EC2 · Nginx · Git · Linux
 * Practical automation techniques for high-availability architectures
 * Infrastructure security best practices, including the protection of sensitive system details
 
-<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" target="_blank" class="github-card">➡️ View full project</a>
+<a href="https://github.com/Cwendee/multi-az-nginx-orchestration" target="_blank" style="display: inline-block; margin: 30px 0; padding: 12px 25px; background: #1e233c; border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; color: #E6BE8A !important; font-weight: 700;">➡️ View full project</a>
