@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "About"
 ---
 
 ## The Evolution: Resilience in Motion
@@ -19,9 +19,10 @@ Curiosity has always shaped how I work. Beyond following workflows, I focus on u
 
 ## 💼 Experience
 **AWS Technical Mentor (Volunteer)** | *Oct 2025 – Present*
-* 🤝 Mentoring learners on AWS fundamentals and cloud concepts
-* 📘 Supporting labs, hands-on projects, and best practices
-* 🌱 Contributing to community-driven learning and skill growth
+
+🤝 Mentoring learners on AWS fundamentals and cloud concepts
+📘 Supporting labs, hands-on projects, and best practices
+🌱 Contributing to community-driven learning and skill growth
 
 <br>
 <p style="text-align: center;">🌱 Continuously learning, building, and applying cloud and DevOps best practices.</p>
