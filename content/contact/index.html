@@ -3,96 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* HIDE THE FOOTER ICONS ONLY ON THIS PAGE */
-        footer div[style*="display: flex"], 
-        .footer-socials, 
-        footer .social-icons { 
-            display: none !important; 
-        }
-
-        .contact-container { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-            color: #9ca3af; 
-            padding-top: 40px;
-        }
-        
-        /* RESTORING YOUR 140PX MARGIN */
-        .contact-intro { 
-            max-width: 600px; 
-            font-size: 1.15rem; 
-            margin-bottom: 140px; 
-            line-height: 1.8; 
-            letter-spacing: 0.5px;
-        }
-        
-        .contact-grid { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 25px; 
-            list-style: none; 
-        }
-        
-        /* RESTORING YOUR 120x90 CARDS */
-        .contact-card { 
-            background: #1e233c; 
-            border: 1px solid #2d3748; 
-            border-radius: 12px;
-            width: 120px; 
-            height: 90px; 
-            display: flex; 
+        /* SITE-WIDE OVERRIDE FOR CONTACT PAGE ONLY */
+        .contact-page-wrapper {
+            display: flex;
             flex-direction: column;
-            align-items: center; 
-            justify-content: center; 
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            text-decoration: none; 
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
             color: #9ca3af;
         }
-        
-        .contact-card:hover { 
-            transform: scale(1.1); 
-            border-color: #3b82f6; 
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); 
-            color: #3b82f6; 
-            animation: bounce 0.4s;
+
+        .contact-intro-text {
+            max-width: 600px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            /* THE VITAL 140PX SPACE */
+            margin-bottom: 140px !important;
+            display: block;
         }
 
-        @keyframes bounce {
+        .contact-card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-item-card {
+            background: #1e233c;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            width: 120px;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            color: #9ca3af;
+        }
+
+        .contact-item-card:hover {
+            transform: scale(1.1);
+            border-color: #3b82f6;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            color: #3b82f6;
+            animation: bounce-effect 0.4s;
+        }
+
+        @keyframes bounce-effect {
             0%, 100% { transform: scale(1.1); }
             50% { transform: scale(0.9); }
         }
-        
-        .contact-emoji { 
-            font-size: 1.8rem; 
-            margin-bottom: 5px; 
-        }
-        
-        .contact-label { 
-            font-weight: 600; 
-            font-size: 0.85rem; 
+
+        .contact-card-emoji { font-size: 1.8rem; margin-bottom: 5px; }
+        .contact-card-label { font-weight: 600; font-size: 0.85rem; }
+
+        /* FORCE HIDE FOOTER SOCIALS ON CONTACT PAGE */
+        footer .footer-socials, 
+        .footer-socials, 
+        footer div[style*="display: flex"] { 
+            display: none !important; 
         }
     </style>
 </head>
 <body>
-    <div class="contact-container">
-        <p class="contact-intro">
+    <div class="contact-page-wrapper">
+        <p class="contact-intro-text">
             Open to discussions on DevOps, Cloud Architecture, or mentorship — reach out through any of the platforms below.
         </p>
-        <div class="contact-grid">
-            <a href="mailto:pruddyanumudu@gmail.com" class="contact-card">
-                <span class="contact-emoji">📧</span>
-                <span class="contact-label">Email</span>
+
+        <div class="contact-card-grid">
+            <a href="mailto:pruddyanumudu@gmail.com" class="contact-item-card">
+                <span class="contact-card-emoji">📧</span>
+                <span class="contact-card-label">Email</span>
             </a>
-            <a href="https://github.com/Cwendee" target="_blank" class="contact-card">
-                <span class="contact-emoji">🐙</span>
-                <span class="contact-label">GitHub</span>
+            <a href="https://github.com/Cwendee" target="_blank" class="contact-item-card">
+                <span class="contact-card-emoji">🐙</span>
+                <span class="contact-card-label">GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656/" target="_blank" class="contact-card">
-                <span class="contact-emoji">💼</span>
-                <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656/" target="_blank" class="contact-item-card">
+                <span class="contact-card-emoji">💼</span>
+                <span class="contact-card-label">LinkedIn</span>
             </a>
         </div>
     </div>
