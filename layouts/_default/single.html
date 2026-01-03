@@ -8,40 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* KILL THE # AND THEME JUNK EVERYWHERE */
         * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
-        .skip-link, .screen-reader-text, .heading-link, .anchor, .buttons, .pagination { 
-            display: none !important; visibility: hidden !important; 
-        }
-
+        .skip-link, .screen-reader-text, .heading-link, .anchor, .buttons, .pagination { display: none !important; }
         body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
-        
         header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; width: 100%; }
         .logo { color: #E6BE8A; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; text-decoration: none; font-weight: 500; }
         nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 600; }
-
         .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 900px; margin: 0 auto; }
-        
         .content-area { width: 100%; text-align: left; }
         .content-area h1 { display: none !important; } 
-        
-        /* DIMMED LIGHT BLUE HEADINGS */
-        .content-area h2 { color: #5a8ccf; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; }
-        .content-area p { margin-bottom: 20px; font-size: 1.1rem; }
-
-        /* CERT CARDS - FIXED TO SHOW DATA */
-        .cert-grid { display: flex; flex-direction: column; gap: 15px; margin: 25px 0; width: 100%; }
-        .cert-card { 
-            background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; padding: 20px;
-            transition: 0.3s; color: #9ca3af;
-        }
-        .cert-card:hover { border-color: #5a8ccf; box-shadow: 0 0 10px rgba(90, 140, 207, 0.3); }
-        .cert-card strong { color: #E6BE8A; display: block; margin-bottom: 5px; }
-
-        .content-area ul { list-style: none; padding-left: 0; }
-        .content-area li { margin-bottom: 12px; }
-
         footer { margin: 80px auto 40px; padding-top: 40px; border-top: 1px solid #2d3748; width: 80%; text-align: center; }
+        
+        /* HIDE FOOTER ICONS ONLY IF PAGE IS CONTACT */
+        {{ if eq .Title "Contact" }}
+        .footer-socials { display: none !important; }
+        {{ end }}
     </style>
 </head>
 <body>
@@ -59,7 +40,7 @@
         </div>
     </div>
     <footer>
-        <div style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
+        <div class="footer-socials" style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
             <a href="https://github.com/Cwendee" target="_blank" style="color: #9ca3af;"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/prudence-c-anumudu-35518656" target="_blank" style="color: #9ca3af;"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:pruddyanumudu@gmail.com" style="color: #9ca3af;"><i class="fas fa-envelope"></i></a>
