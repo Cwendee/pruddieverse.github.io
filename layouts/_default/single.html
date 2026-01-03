@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | Pruddieverse</title>
     <link rel="icon" type="image/png" href="https://www.pruddieverse.com/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -9,9 +10,9 @@
     <style>
         body { background-color: #14182d; color: #9ca3af; font-family: 'Montserrat', sans-serif; line-height: 1.8; margin: 0; font-style: normal !important; }
         header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: #E6BE8A; text-decoration: none; font-size: 1.8rem; font-weight: 700; }
-        nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 600; }
-        .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .logo { color: #E6BE8A; text-decoration: none; font-size: 1.5rem; font-weight: 700; }
+        nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
         p strong:first-child { color: #5a8ccf; font-size: 1.4rem; display: block; margin-bottom: 20px; }
         h2, strong { color: #9ca3af; font-size: 1rem; }
         .github-card {
@@ -27,6 +28,15 @@
 <body>
     <header><a href="/" class="logo">Pruddieverse</a><nav><a href="/projects">Projects</a><a href="/about">About</a><a href="/contact">Contact</a></nav></header>
     <div class="container">{{ .Content }}</div>
-    <footer><div class="footer-icons"><a href="https://github.com/Cwendee" target="_blank"><i class="fab fa-github"></i></a><a href="https://linkedin.com/in/prudence-anumudu" target="_blank"><i class="fab fa-linkedin"></i></a><a href="mailto:prudence.anumudu@example.com"><i class="fas fa-envelope"></i></a></div><p style="margin-top: 20px;">© 2025 Prudence Anumudu</p></footer>
+    <footer>
+        {{ if ne .Title "Contact" }}
+        <div class="footer-icons">
+            <a href="https://github.com/Cwendee" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/prudence-anumudu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:prudence.anumudu@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        {{ end }}
+        <p style="margin-top: 20px;">© 2025 Prudence Anumudu</p>
+    </footer>
 </body>
 </html>
