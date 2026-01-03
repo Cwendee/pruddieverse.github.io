@@ -9,21 +9,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background-color: #14182d; color: #9ca3af; font-family: 'Montserrat', sans-serif; margin: 0; font-style: normal !important; }
-        header { padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; }
+        header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; }
         .logo { color: #E6BE8A; text-decoration: none; font-size: 1.5rem; font-weight: 700; }
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; text-align: center; }
         h1 { color: #9ca3af; font-size: 1.8rem; margin-bottom: 40px; }
+        
         .project-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        
         .project-card {
-            background: #1e233c; border: 1px solid #2d3748; border-radius: 15px;
-            padding: 20px; width: 280px; min-height: 200px; transition: 0.3s; text-align: left;
+            background: #1e233c; 
+            border: 1px solid #2d3748; 
+            border-radius: 15px;
+            padding: 20px 20px 15px 20px; /* Reduced bottom padding from 30px to 15px */
+            width: 250px; /* Reduced width from 280px to 250px */
+            min-height: 180px; 
+            transition: 0.3s; 
+            text-align: left;
+            display: flex;
+            flex-direction: column;
         }
+        
         .project-card:hover { border-color: #3b82f6; }
-        .project-title { color: #9ca3af; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
-        .project-snippet { color: #9ca3af; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5; }
-        .case-study-link { color: #9ca3af; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
+        .project-title { color: #9ca3af; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+        .project-snippet { color: #9ca3af; font-size: 0.85rem; margin-bottom: 15px; line-height: 1.4; flex-grow: 1; }
+        
+        .case-study-link { 
+            color: #9ca3af; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.85rem; 
+            transition: 0.3s;
+            margin-top: auto; /* Pushes link to bottom but respects padding */
+        }
         .case-study-link:hover { color: #5a8ccf; text-shadow: 0 0 8px rgba(90, 140, 207, 0.6); }
+        
         footer { margin-top: 60px; padding: 40px; border-top: 1px solid #2d3748; text-align: center; }
         .footer-icons a { color: #9ca3af; font-size: 1.3rem; margin: 0 12px; transition: 0.3s; }
         .footer-icons a:hover { color: #E6BE8A; }
@@ -31,7 +51,18 @@
 </head>
 <body>
     <header><a href="/" class="logo">Pruddieverse</a><nav><a href="/projects">Projects</a><a href="/about">About</a><a href="/contact">Contact</a></nav></header>
-    <div class="container"><h1>The Laboratory</h1><div class="project-grid">{{ range .Pages }}<div class="project-card"><div class="project-title">{{ .Title }}</div><div class="project-snippet">{{ .Summary }}</div><a href="{{ .RelPermalink }}" class="case-study-link">Open Case Study ———→</a></div>{{ end }}</div></div>
+    <div class="container">
+        <h1>The Laboratory</h1>
+        <div class="project-grid">
+            {{ range .Pages }}
+            <div class="project-card">
+                <div class="project-title">{{ .Title }}</div>
+                <div class="project-snippet">{{ .Summary }}</div>
+                <a href="{{ .RelPermalink }}" class="case-study-link">Open Case Study ———→</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
     <footer>
         <div class="footer-icons">
             <a href="https://github.com/Cwendee" target="_blank"><i class="fab fa-github"></i></a>
