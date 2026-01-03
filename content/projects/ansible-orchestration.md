@@ -1,6 +1,5 @@
 ---
 title: "Automated Multi-Node Infrastructure (Ansible + AWS)"
-date: 2026-01-03
 summary: "Automated the provisioning and configuration of a multi-node web infrastructure on AWS using Ansible."
 ---
 

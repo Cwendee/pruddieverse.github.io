@@ -1,6 +1,5 @@
 ---
 title: "Multi-AZ Nginx Orchestration with Ansible (AWS)"
-date: 2026-01-03
 summary: "Designed and automated a highly available Nginx web infrastructure across multiple AWS Availability Zones."
 ---
 
