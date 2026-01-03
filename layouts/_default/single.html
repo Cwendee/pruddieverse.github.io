@@ -8,12 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* SITE-WIDE FIXES */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
-        .skip-link, .screen-reader-text, .heading-link, .anchor, .buttons, .pagination { 
-            display: none !important; visibility: hidden !important; 
+        /* 1. AGGRESSIVE GLOBAL FIX FOR THE # SYMBOLS */
+        .anchor, 
+        .heading-link, 
+        h1 a, h2 a, h3 a, h4 a, 
+        header-link,
+        .header-link,
+        [id] > a[href^="#"] { 
+            display: none !important; 
+            visibility: hidden !important; 
+            text-decoration: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
         }
 
+        /* 2. Standard Layout Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
+        .skip-link, .screen-reader-text, .buttons, .pagination { display: none !important; }
         body { background-color: #14182d; color: #9ca3af; font-family: 'Inter', sans-serif; line-height: 1.6; }
         
         header { display: flex; justify-content: space-between; align-items: center; padding: 30px 10%; width: 100%; }
@@ -21,30 +32,27 @@
         nav a { color: #9ca3af; text-decoration: none; margin-left: 30px; font-weight: 600; }
 
         .container { display: flex; flex-direction: column; align-items: center; padding: 60px 20px; max-width: 900px; margin: 0 auto; }
-        
         .content-area { width: 100%; text-align: left; }
-        .content-area h1 { display: none !important; } 
+        
+        /* Heading Styling */
+        .content-area h1 { color: #5a8ccf; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 2rem; }
         .content-area h2 { color: #5a8ccf; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px; font-size: 1.5rem; }
         .content-area p { margin-bottom: 20px; font-size: 1.1rem; }
 
-        /* THE IMAGE FIX: CONSTRAIN LARGE ARCHITECTURE DIAGRAMS */
+        /* Image Control (Architecture Diagrams) */
         .content-area img { 
-            max-width: 85%; /* Prevents images from filling the whole width */
+            max-width: 85%; 
             height: auto; 
             display: block; 
-            margin: 30px auto; /* Centers the image with space above/below */
+            margin: 30px auto; 
             border-radius: 12px; 
-            border: 1px solid #2d3748; /* Subtle border */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Gives it depth */
+            border: 1px solid #2d3748; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
         }
-
-        /* NO BULLETS FOR EXPERIENCE */
-        .content-area ul { list-style: none; padding-left: 0; }
-        .content-area li { margin-bottom: 12px; }
 
         footer { margin: 80px auto 40px; padding-top: 40px; border-top: 1px solid #2d3748; width: 80%; text-align: center; }
 
-        /* HIDE FOOTER ICONS ON CONTACT PAGE */
+        /* Hide Footer Socials only on Contact page */
         {{ if eq .Title "Contact" }}
         .footer-socials { display: none !important; }
         {{ end }}
