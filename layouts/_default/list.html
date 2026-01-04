@@ -11,61 +11,49 @@
         body { background-color: #14182d; color: #9ca3af; font-family: 'Montserrat', sans-serif; line-height: 1.8; margin: 0; }
         header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; }
         
-        /* LOGO MATCH: Identical to Home Page */
-        .logo { color: #E6BE8A; text-decoration: none; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        /* 1. LOGO: Uniform Thickness (Bold 700) */
+        .logo { color: #E6BE8A; text-decoration: none; font-size: 1.5rem; font-weight: 700 !important; }
         
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
 
-        /* CONTACT CARDS: THE HARD LOCK */
-        .contact-grid { display: flex; justify-content: center; gap: 20px; margin: 50px 0; }
+        /* 2. PROJECT TITLE: Big, Bold, and Light Blue */
+        .container p:first-of-type strong:first-child { 
+            color: #5a8ccf !important; 
+            font-size: 1.5rem !important; 
+            font-weight: 700 !important;
+            display: block; 
+            margin-bottom: 25px; 
+        }
+
+        /* Sub-headings (Keeping these as is) */
+        .container strong { color: #9ca3af; font-weight: 700; font-size: 1.05rem; display: block; margin-top: 25px; margin-bottom: 2px; }
+        .container li strong { display: inline; color: inherit; font-size: inherit; }
+
+        /* 3. CONTACT CARDS: Perfectly Aligned & Same Size */
+        .contact-grid { display: flex; justify-content: center; gap: 20px; margin: 50px 0; align-items: stretch; }
         .contact-card { 
             background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; 
-            width: 150px !important; min-width: 150px !important; max-width: 150px !important;
-            height: 120px !important; display: flex; flex-direction: column; 
-            justify-content: center; align-items: center; text-decoration: none; color: #9ca3af; 
-            box-sizing: border-box;
+            width: 155px !important; height: 125px !important;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-decoration: none; color: #9ca3af; box-sizing: border-box;
         }
         .contact-card i { font-size: 2rem; margin-bottom: 8px; }
         .contact-card span { font-weight: 700; font-size: 0.85rem; }
 
-        /* View Project Button Hover */
-        .container a[href^="https://github.com/"] {
-            display: inline-block; margin-top: 30px; padding: 12px 25px; 
-            background: #1e233c; border: 1px solid #2d3748; border-radius: 8px; 
-            text-decoration: none; color: #E6BE8A !important; font-weight: 700; 
-            transition: 0.3s;
-        }
+        /* GitHub Button Styling (Keeping your existing perfect style) */
+        .container a[href^="https://github.com/"] { display: inline-block; margin-top: 30px; padding: 12px 25px; background: #1e233c; border: 1px solid #2d3748; border-radius: 8px; text-decoration: none; color: #E6BE8A !important; font-weight: 700; transition: 0.3s; }
         .container a[href^="https://github.com/"]:hover { border-color: #3b82f6; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
 
-        /* FOOTER SOCIALS */
+        footer { margin-top: 80px; padding: 60px; border-top: 1px solid #2d3748; text-align: center; }
         .footer-socials { margin-bottom: 20px; display: flex; justify-content: center; gap: 25px; }
         .footer-socials a { color: #9ca3af; font-size: 1.5rem; transition: 0.3s; text-decoration: none; }
         .footer-socials a:hover { color: #E6BE8A; }
-
-        footer { margin-top: 80px; padding: 60px; border-top: 1px solid #2d3748; text-align: center; }
-        
-        /* List page specific grid */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .project-card { background: #1e233c; border: 1px solid #2d3748; border-radius: 12px; padding: 25px; text-decoration: none; color: #9ca3af; transition: 0.3s; }
-        .project-card:hover { border-color: #3b82f6; transform: translateY(-5px); }
-        .project-card h3 { color: #5a8ccf; margin: 0 0 10px 0; }
     </style>
 </head>
 <body>
     <header><a href="/" class="logo">Pruddieverse</a><nav><a href="/projects">Projects</a><a href="/about">About</a><a href="/contact">Contact</a></nav></header>
-    <div class="container">
-        {{ if .Content }}{{ .Content }}{{ else }}
-        <div class="project-grid">
-            {{ range .Pages }}
-            <a href="{{ .Permalink }}" class="project-card">
-                <h3>{{ .Title }}</h3>
-                <p>{{ .Summary }}</p>
-            </a>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
+    <div class="container">{{ .Content }}</div>
     <footer>
         <div class="footer-socials">
             <a href="https://github.com/Cwendee" target="_blank"><i class="fab fa-github"></i></a>
