@@ -11,8 +11,8 @@
         body { background-color: #14182d; color: #9ca3af; font-family: 'Montserrat', sans-serif; line-height: 1.8; margin: 0; }
         header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; }
         
-        /* THE LOGO FIX: Forced 700 Weight */
-        .logo { color: #E6BE8A !important; text-decoration: none !important; font-size: 1.5rem !important; font-weight: 700 !important; }
+        /* THE LOGO FIX: Forced 700 Weight & Alignment */
+        .logo { color: #E6BE8A !important; text-decoration: none !important; font-size: 1.5rem !important; font-weight: 700 !important; display: inline-block !important; }
         
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
@@ -22,11 +22,17 @@
         .container strong { color: #9ca3af; font-weight: 700; font-size: 1.05rem; display: block; margin-top: 25px; margin-bottom: 2px; }
         .container li strong { display: inline; color: inherit; font-size: inherit; }
 
-        /* THE CONTACT CARDS FIX: Hard-coded dimensions */
-        .contact-grid { display: flex !important; justify-content: center !important; gap: 20px !important; margin: 50px 0 !important; align-items: flex-start !important; }
+        /* THE CONTACT CARDS FIX: Rigid Grid Lock */
+        .contact-grid { 
+            display: grid !important; 
+            grid-template-columns: repeat(3, 155px) !important; 
+            justify-content: center !important; 
+            gap: 20px !important; 
+            margin: 50px 0 !important; 
+        }
         .contact-card { 
             background: #1e233c !important; border: 1px solid #2d3748 !important; border-radius: 12px !important; 
-            width: 155px !important; height: 125px !important; min-width: 155px !important;
+            height: 125px !important; width: 155px !important;
             display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; 
             text-decoration: none !important; color: #9ca3af !important; box-sizing: border-box !important;
         }
